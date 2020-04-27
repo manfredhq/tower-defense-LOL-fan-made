@@ -4,6 +4,9 @@ public class Ennemy : MonoBehaviour
 {
 
     public float speed = 10f;
+    public int hp = 100;
+    public int moneyValue = 15;
+    public GameObject deathEffect;
     private Transform target;
     private int waypointIndex = 0;
 
@@ -29,15 +32,34 @@ public class Ennemy : MonoBehaviour
     {
         if (waypointIndex >= Waypoints.points.Length - 1)
         {
-            Die();
+            DamagePlayer();
             return;
         }
         waypointIndex++;
         target = Waypoints.points[waypointIndex];
     }
 
-    void Die()
+    void DamagePlayer()
     {
+        PlayerStats.lives--;
         Destroy(gameObject);
+    }
+    private void Die()
+    {
+        PlayerStats.money += moneyValue;
+
+
+        GameObject effect = Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Destroy(effect, 5f);
+        Destroy(gameObject);
+    }
+
+    public void TakeDamage(int amount)
+    {
+        hp -= amount;
+        if (hp <= 0)
+        {
+            Die();
+        }
     }
 }
