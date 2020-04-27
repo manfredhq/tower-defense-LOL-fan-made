@@ -4,12 +4,24 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
+    public enum shootMode { Closer, First };
+    public shootMode actualMode;
+
     public float range = 15f;
     private Transform target;
     public Transform partToRotate;
     public float turnSpeed = 10f;
+    public float fireRate = 1f;
+    private float fireCountdown = 0f;
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+
+
+
+    [Header("tags")]
     public string ennemyTag = "Enemy";
     public string containerTag = "EnnemyContainer";
+
 
     private void Start()
     {
@@ -21,36 +33,42 @@ public class Turret : MonoBehaviour
         GameObject container = GameObject.FindGameObjectWithTag(containerTag);
 
         //To focus on the nearest ennemy
-        /*float shortestDistance = Mathf.Infinity;
-        GameObject nearestEnemy = null;
-
-        foreach (GameObject ennemy in ennemies)
+        if (actualMode == shootMode.Closer)
         {
-            float distanceToEnnemy = Vector3.Distance(transform.position, ennemy.transform.position);
-            if (shortestDistance > distanceToEnnemy)
+
+            float shortestDistance = Mathf.Infinity;
+            GameObject nearestEnemy = null;
+
+            foreach (GameObject ennemy in ennemies)
             {
-                shortestDistance = distanceToEnnemy;
-                nearestEnemy = ennemy;
+                float distanceToEnnemy = Vector3.Distance(transform.position, ennemy.transform.position);
+                if (shortestDistance > distanceToEnnemy)
+                {
+                    shortestDistance = distanceToEnnemy;
+                    nearestEnemy = ennemy;
+                }
+            }
+
+            if (nearestEnemy != null && shortestDistance <= range)
+            {
+                target = nearestEnemy.transform;
+            }
+            else
+            {
+                target = null;
             }
         }
-
-        if (nearestEnemy != null && shortestDistance <= range)
+        else if (actualMode == shootMode.First)
         {
-            target = nearestEnemy.transform;
-        }
-        else
-        {
-            target = null;
-        }*/
-
-        //focus on the ennemy closer to the end
-        for (int i = 0; i < container.transform.childCount; i++)
-        {
-            float distanceToEnnemy = Vector3.Distance(transform.position, container.transform.GetChild(i).transform.position);
-            if (distanceToEnnemy <= range)
+            //focus on the ennemy closer to the end
+            for (int i = 0; i < container.transform.childCount; i++)
             {
-                target = container.transform.GetChild(i).transform;
-                return;
+                float distanceToEnnemy = Vector3.Distance(transform.position, container.transform.GetChild(i).transform.position);
+                if (distanceToEnnemy <= range)
+                {
+                    target = container.transform.GetChild(i).transform;
+                    return;
+                }
             }
         }
     }
@@ -65,6 +83,23 @@ public class Turret : MonoBehaviour
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+
+        if (fireCountdown <= 0)
+        {
+            Shoot();
+            fireCountdown = 1f / fireRate;
+        }
+        fireCountdown -= Time.deltaTime;
+    }
+
+    void Shoot()
+    {
+        GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        Bullet bullet = bulletGO.GetComponent<Bullet>();
+        if (bullet != null)
+        {
+            bullet.Initiate(target);
+        }
     }
     private void OnDrawGizmosSelected()
     {
