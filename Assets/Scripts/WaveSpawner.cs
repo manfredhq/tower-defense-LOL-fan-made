@@ -4,6 +4,7 @@ using System.Collections;
 
 public class WaveSpawner : MonoBehaviour
 {
+    public Transform container;
     public Transform spawnPoint;
     public TMP_Text waveCountdownTimer;
     public Transform ennemyPrefab;
@@ -48,6 +49,6 @@ public class WaveSpawner : MonoBehaviour
 
     void SpawnEnnemy()
     {
-        Instantiate(ennemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        Instantiate(ennemyPrefab, spawnPoint.position, spawnPoint.rotation, container);
     }
 }
