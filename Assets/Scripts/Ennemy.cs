@@ -26,6 +26,11 @@ public class Ennemy : MonoBehaviour
         {
             GetNextWaypoint();
         }
+
+
+        Quaternion lookRotation = Quaternion.LookRotation(dir);
+        Vector3 rotation = Quaternion.Lerp(gameObject.transform.rotation, lookRotation, Time.deltaTime * 10).eulerAngles;
+        gameObject.transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
     }
 
     void GetNextWaypoint()
