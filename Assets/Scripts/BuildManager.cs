@@ -6,6 +6,7 @@ public class BuildManager : MonoBehaviour
 {
     public static BuildManager instance;
 
+    //to handle the singleton
     private void Awake()
     {
         if (instance != null)
@@ -18,16 +19,17 @@ public class BuildManager : MonoBehaviour
     }
 
     public GameObject standartTurretPrefab;
-
-    private void Start()
-    {
-        turretToBuild = standartTurretPrefab;
-    }
+    public GameObject missileTurretPrefab;
 
     private GameObject turretToBuild;
 
     public GameObject GetTurretToBuild()
     {
         return turretToBuild;
+    }
+
+    public void SetTurretToBuild(GameObject turret)
+    {
+        turretToBuild = turret;
     }
 }

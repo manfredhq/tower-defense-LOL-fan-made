@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Node : MonoBehaviour
 {
@@ -12,14 +13,27 @@ public class Node : MonoBehaviour
     private Renderer rend;
     private Color baseColor;
 
+    BuildManager buildManager;
+
     private void Start()
     {
+        buildManager = BuildManager.instance;
         rend = GetComponent<Renderer>();
         baseColor = rend.material.color;
     }
 
     private void OnMouseDown()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
+        if (buildManager.GetTurretToBuild() == null)
+        {
+            return;
+        }
+
         if (currentTurret != null)
         {
             //TODO: upgrade systeme aswell as a selling one
@@ -28,13 +42,22 @@ public class Node : MonoBehaviour
         }
 
         //build a turret
-        GameObject turretToBuild = BuildManager.instance.GetTurretToBuild();
+        GameObject turretToBuild = buildManager.GetTurretToBuild();
         currentTurret = Instantiate(turretToBuild, transform.position + positionOffset, transform.rotation);
 
     }
 
     private void OnMouseEnter()
     {
+        if (EventSystem.current.IsPointerOverGameObject())
+        {
+            return;
+        }
+
+        if (buildManager.GetTurretToBuild() == null)
+        {
+            return;
+        }
         rend.material.color = hoverColor;
     }
 
