@@ -3,7 +3,32 @@ guid: 82aaa0cc2d2a1204c91c0501f6f94a6a
 ModelImporter:
   serializedVersion: 20100
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bolts
+    second: {fileID: 2100000, guid: e138f6a9e83330c469f198a49b84ad5b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Main Turret
+    second: {fileID: 2100000, guid: 2e4fc72873752e641a96826227d7a046, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Pipe
+    second: {fileID: 2100000, guid: 300545670fbfda9429166eab1718ea78, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stand
+    second: {fileID: 2100000, guid: c15f83b42f3725d4abdc5bf688d40f06, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Turret Accent
+    second: {fileID: 2100000, guid: 281b89a865b705840adaa0e71c9e073b, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -34,7 +59,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1
+    globalScale: 0.5
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -84,7 +109,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 0.5
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

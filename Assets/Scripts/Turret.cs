@@ -4,18 +4,30 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
+
     public enum shootMode { Closer, First };
+    [Header("Target system")]
     public shootMode actualMode;
 
+    [Header("General")]
     public float range = 15f;
-    private Transform target;
-    public Transform partToRotate;
     public float turnSpeed = 10f;
+
+    [Header("Use bullets (default)")]
+    public GameObject bulletPrefab;
     public float fireRate = 1f;
     private float fireCountdown = 0f;
-    public GameObject bulletPrefab;
-    public Transform firePoint;
 
+    [Header("Use laser")]
+    public bool isLaser = false;
+    public LineRenderer lineRenderer;
+
+
+    private Transform target;
+
+    [Header("Reference")]
+    public Transform partToRotate;
+    public Transform firePoint;
 
 
     [Header("tags")]
@@ -73,23 +85,55 @@ public class Turret : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void LockOnTarget()
     {
-        if (target == null)
-        {
-            return;
-        }
         Vector3 dir = target.position - transform.position;
         Quaternion lookRotation = Quaternion.LookRotation(dir);
         Vector3 rotation = Quaternion.Lerp(partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+    }
 
-        if (fireCountdown <= 0)
+    private void Laser()
+    {
+        if (!lineRenderer.enabled)
         {
-            Shoot();
-            fireCountdown = 1f / fireRate;
+            lineRenderer.enabled = true;
         }
-        fireCountdown -= Time.deltaTime;
+        lineRenderer.SetPosition(0, firePoint.position);
+        lineRenderer.SetPosition(1, target.position);
+    }
+
+    private void Update()
+    {
+        if (target == null)
+        {
+            if (isLaser)
+            {
+                if (lineRenderer.enabled)
+                {
+                    lineRenderer.enabled = false;
+                }
+            }
+
+
+            return;
+        }
+
+        LockOnTarget();
+
+        if (isLaser)
+        {
+            Laser();
+        }
+        else
+        {
+            if (fireCountdown <= 0)
+            {
+                Shoot();
+                fireCountdown = 1f / fireRate;
+            }
+            fireCountdown -= Time.deltaTime;
+        }
     }
 
     void Shoot()

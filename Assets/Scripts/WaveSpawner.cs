@@ -25,7 +25,7 @@ public class WaveSpawner : MonoBehaviour
         }
         if (isSpawning == true)
         {
-            waveCountdownTimer.text = "Wave Spawning";
+            waveCountdownTimer.text = "0";
         }
         else
         {
