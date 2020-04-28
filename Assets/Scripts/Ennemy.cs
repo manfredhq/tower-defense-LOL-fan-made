@@ -30,6 +30,10 @@ public class Ennemy : MonoBehaviour
     private void Update()
     {
         hpBarGO.transform.position = transform.position + new Vector3(0, 3, 0);
+        if (currentHp <= 0)
+        {
+            Die();
+        }
     }
     private void Die()
     {
@@ -46,10 +50,7 @@ public class Ennemy : MonoBehaviour
         currentHp -= amount;
 
         hpBar.fillAmount = currentHp / startHp;
-        if (currentHp <= 0)
-        {
-            Die();
-        }
+
     }
 
     public void Slow(float amount)

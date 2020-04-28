@@ -8,6 +8,8 @@ public class GameOver : MonoBehaviour
 {
     public TMP_Text wavesText;
 
+    public SceneFader sceneFader;
+
     private void OnEnable()
     {
         wavesText.text = PlayerStats.waves.ToString();
@@ -15,11 +17,11 @@ public class GameOver : MonoBehaviour
 
     public void Retry()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
     }
 
     public void GotoMenu()
     {
-        SceneManager.LoadScene("Menu");
+        sceneFader.FadeTo("Menu");
     }
 }
