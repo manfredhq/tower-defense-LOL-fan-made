@@ -8,25 +8,15 @@ public class CameraController : MonoBehaviour
     public float minY = 8f;
     public float maxY = 80f;
 
-    private bool doMovement = true;
-
     // Update is called once per frame
     void Update()
     {
         if (GameManager.isGameEnded)
         {
-            this.enabled = false;
+            enabled = false;
             return;
         }
-        //To "pause" the camera movement
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            doMovement = !doMovement;
-        }
-        if (!doMovement)
-        {
-            return;
-        }
+
 
         //Make the movement of the camera
         if (Input.GetKey("z") || Input.mousePosition.y >= Screen.height - panBorder)
