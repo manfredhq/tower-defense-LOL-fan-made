@@ -40,6 +40,7 @@ public class WaveSpawner : MonoBehaviour
     {
         isSpawning = true;
         waveIndex++;
+        PlayerStats.waves++;
         for (int i = 0; i < waveIndex; i++)
         {
             SpawnEnnemy();

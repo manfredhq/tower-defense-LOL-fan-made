@@ -13,6 +13,11 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (GameManager.isGameEnded)
+        {
+            this.enabled = false;
+            return;
+        }
         //To "pause" the camera movement
         if (Input.GetKeyDown(KeyCode.Escape))
         {
