@@ -9,6 +9,7 @@ public class WaveSpawner : MonoBehaviour
     public TMP_Text waveCountdownTimer;
     public Transform ennemyPrefab;
     public float timeBetweenWaves = 7f;
+    public float timeBetweenSpawn = .5f;
     private float countdown = 2f;
     private int waveIndex = 0;
     private bool isSpawning = false;
@@ -44,7 +45,7 @@ public class WaveSpawner : MonoBehaviour
         for (int i = 0; i < waveIndex; i++)
         {
             SpawnEnnemy();
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(timeBetweenSpawn);
         }
         isSpawning = false;
         countdown = timeBetweenWaves;

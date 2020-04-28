@@ -47,9 +47,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   startSpeed: 10
-  hp: 100
+  startHp: 100
+  currentHp: 0
   moneyValue: 15
   deathEffect: {fileID: 3382960836113860337, guid: b6bbc9388d4349f47b3ff094b6dead7a, type: 3}
+  hpBarCanvas: {fileID: 6761151840423629572, guid: 04291cb8529bdeb48a361afb9d56749f, type: 3}
+  hpBar: {fileID: 0}
 --- !u!114 &7357410518197040654
 MonoBehaviour:
   m_ObjectHideFlags: 0
