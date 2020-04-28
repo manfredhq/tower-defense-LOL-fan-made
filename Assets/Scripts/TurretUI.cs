@@ -12,6 +12,8 @@ public class TurretUI : MonoBehaviour
     public TMP_Text upgradeCost;
     public Button upgradeButton;
 
+    public TMP_Text sellGain;
+
     private Node target;
 
 
@@ -33,7 +35,7 @@ public class TurretUI : MonoBehaviour
             upgradeCost.text = "MAX";
         }
 
-
+        sellGain.text = target.turretBlueprint.GetSellAmount() + "$";
 
         ui.SetActive(true);
     }
@@ -45,8 +47,13 @@ public class TurretUI : MonoBehaviour
 
     public void Upgrade()
     {
-        Debug.Log("upgrade button clicked");
         target.UpgradeTurret();
+        BuildManager.instance.DeselectNode();
+    }
+
+    public void Sell()
+    {
+        target.SellTurret();
         BuildManager.instance.DeselectNode();
     }
 }

@@ -72,6 +72,17 @@ public class Node : MonoBehaviour
 
         Debug.Log("Turret upgraded");
     }
+    public void SellTurret()
+    {
+        PlayerStats.money += turretBlueprint.GetSellAmount();
+
+        //Play an effect
+        GameObject effect = Instantiate(buildManager.sellEffect, GetBuildPosition(), Quaternion.identity);
+        Destroy(effect, 5f);
+
+        Destroy(currentTurret);
+        turretBlueprint = null;
+    }
 
     private void BuildTurret(TurretBlueprint blueprint)
     {
@@ -120,4 +131,5 @@ public class Node : MonoBehaviour
     {
         rend.material.color = baseColor;
     }
+
 }

@@ -78,6 +78,7 @@ public class Bullet : MonoBehaviour
                 Damage(collider.transform);
             }
         }
+        Destroy(gameObject);
     }
 
     private void OnDrawGizmosSelected()
