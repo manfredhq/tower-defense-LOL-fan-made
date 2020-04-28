@@ -7,7 +7,9 @@ public class WaveSpawner : MonoBehaviour
     public Transform container;
     public Transform spawnPoint;
     public TMP_Text waveCountdownTimer;
+
     public Transform ennemyPrefab;
+
     public float timeBetweenWaves = 7f;
     public float timeBetweenSpawn = .5f;
     private float countdown = 2f;
