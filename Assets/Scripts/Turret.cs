@@ -20,12 +20,15 @@ public class Turret : MonoBehaviour
 
     [Header("Use laser")]
     public bool isLaser = false;
+    public float DOT = 30f;
+    public float slowPercent = .5f;
     public LineRenderer lineRenderer;
     public ParticleSystem impactEffect;
     public Light impactLight;
 
 
     private Transform target;
+    private Ennemy ennemy;
 
     [Header("Reference")]
     public Transform partToRotate;
@@ -66,10 +69,12 @@ public class Turret : MonoBehaviour
             if (nearestEnemy != null && shortestDistance <= range)
             {
                 target = nearestEnemy.transform;
+                ennemy = target.GetComponent<Ennemy>();
             }
             else
             {
                 target = null;
+                ennemy = null;
             }
         }
         else if (actualMode == shootMode.First)
@@ -81,11 +86,13 @@ public class Turret : MonoBehaviour
                 if (distanceToEnnemy <= range)
                 {
                     target = container.transform.GetChild(i).transform;
+                    ennemy = target.GetComponent<Ennemy>();
                     return;
                 }
                 else if (distanceToEnnemy >= range)
                 {
                     target = null;
+                    ennemy = null;
                 }
             }
         }
@@ -101,6 +108,9 @@ public class Turret : MonoBehaviour
 
     private void Laser()
     {
+        ennemy.TakeDamage(DOT * Time.deltaTime);
+        ennemy.Slow(slowPercent);
+
         if (!lineRenderer.enabled)
         {
             lineRenderer.enabled = true;
