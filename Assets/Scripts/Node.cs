@@ -31,15 +31,14 @@ public class Node : MonoBehaviour
             return;
         }
 
-        if (!buildManager.CanBuild)
+        if (currentTurret != null)
         {
+            buildManager.SelectNode(this);
             return;
         }
 
-        if (currentTurret != null)
+        if (!buildManager.CanBuild)
         {
-            //TODO: upgrade systeme aswell as a selling one
-            Debug.Log("there is already something here");
             return;
         }
 
