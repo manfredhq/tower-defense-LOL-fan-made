@@ -23,6 +23,14 @@ public class WaveSpawner : MonoBehaviour
         {
             return;
         }
+        if (waveIndex == waves.Length)
+        {
+            //End Level
+            gameManager.WinLevel();
+            Debug.Log("Level complete");
+            this.enabled = false;
+
+        }
         if (countdown <= 0f)
         {
             StartCoroutine(SpawnWave());
@@ -54,14 +62,7 @@ public class WaveSpawner : MonoBehaviour
         waveIndex++;
         countdown = timeBetweenWaves;
 
-        if (waveIndex == waves.Length && EnemiesAlives == 0)
-        {
-            //End Level
-            gameManager.WinLevel();
-            Debug.Log("Level complete");
-            this.enabled = false;
 
-        }
     }
 
     void SpawnEnnemy(GameObject enemyPrefab)

@@ -17,6 +17,7 @@ public class Ennemy : MonoBehaviour
     public GameObject hpBarCanvas;
 
     private GameObject hpBarGO;
+    private bool isAlive = true;
 
     private void Start()
     {
@@ -30,13 +31,11 @@ public class Ennemy : MonoBehaviour
     private void Update()
     {
         hpBarGO.transform.position = transform.position + new Vector3(0, 3, 0);
-        if (currentHp <= 0)
-        {
-            Die();
-        }
+
     }
     private void Die()
     {
+        isAlive = false;
         PlayerStats.money += moneyValue;
         Destroy(hpBarGO);
 
@@ -52,7 +51,10 @@ public class Ennemy : MonoBehaviour
         currentHp -= amount;
 
         hpBar.fillAmount = currentHp / startHp;
-
+        if (currentHp <= 0 && isAlive)
+        {
+            Die();
+        }
     }
 
     public void Slow(float amount)
