@@ -40,6 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6968787915349987123}
   - component: {fileID: 1275259647}
+  - component: {fileID: 3019469230633309777}
   m_Layer: 0
   m_Name: jinx_Base
   m_TagString: Untagged
@@ -85,10 +86,26 @@ MonoBehaviour:
   lineRenderer: {fileID: 0}
   impactEffect: {fileID: 0}
   impactLight: {fileID: 0}
+  timeShooted: 0
   partToRotate: {fileID: 8011632673002957138}
   firePoint: {fileID: 5152812066470332192}
   ennemyTag: Enemy
   containerTag: EnnemyContainer
+--- !u!114 &3019469230633309777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6263735736666586400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a35f5cf1abb25449b6e0a1c44b38895, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turret: {fileID: 1275259647}
+  fireRateAugmentRate: 0.05
+  maxStack: 5
 --- !u!1 &7620020851754693225
 GameObject:
   m_ObjectHideFlags: 0

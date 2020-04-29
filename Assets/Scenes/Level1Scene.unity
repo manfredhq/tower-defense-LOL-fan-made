@@ -17631,7 +17631,7 @@ MonoBehaviour:
   jinx:
     prefab: {fileID: 6263735736666586400, guid: 5e3453e0c3a5b4f44bfacc6d0c154680, type: 3}
     cost: 300
-    upgradedPrefab: {fileID: 6263735736666586400, guid: dfa5747d09d747d43ae9b30d70ed4418, type: 3}
+    upgradedPrefab: {fileID: 3978576855111083892, guid: c04827022d3505844a3d42490908ce18, type: 3}
     upgradeCost: 400
 --- !u!1001 &1368980452
 PrefabInstance:
