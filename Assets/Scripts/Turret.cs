@@ -30,6 +30,9 @@ public class Turret : MonoBehaviour
     private Transform target;
     private Ennemy ennemy;
 
+    [HideInInspector]
+    public int timeShooted = 0;
+
     [Header("Reference")]
     public Transform partToRotate;
     public Transform firePoint;
@@ -168,7 +171,9 @@ public class Turret : MonoBehaviour
         if (bullet != null)
         {
             bullet.Initiate(target);
+            timeShooted++;
         }
+
     }
     private void OnDrawGizmosSelected()
     {
