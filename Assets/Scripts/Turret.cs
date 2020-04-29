@@ -12,6 +12,7 @@ public class Turret : MonoBehaviour
     [Header("General")]
     public float range = 15f;
     public float turnSpeed = 10f;
+    public BasicAttackScript attackScript;
 
     [Header("Use bullets (default)")]
     public GameObject bulletPrefab;
@@ -26,8 +27,8 @@ public class Turret : MonoBehaviour
     public ParticleSystem impactEffect;
     public Light impactLight;
 
-
-    private Transform target;
+    [HideInInspector]
+    public Transform target;
     private Ennemy ennemy;
 
     [HideInInspector]
@@ -170,6 +171,7 @@ public class Turret : MonoBehaviour
         Bullet bullet = bulletGO.GetComponent<Bullet>();
         if (bullet != null)
         {
+            attackScript.PlayAttackAnimation(fireRate);
             bullet.Initiate(target);
             timeShooted++;
         }
