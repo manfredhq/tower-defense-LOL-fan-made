@@ -6,20 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    public TMP_Text wavesText;
 
-    private void OnEnable()
-    {
-        wavesText.text = PlayerStats.waves.ToString();
-    }
+    public SceneFader sceneFader;
 
     public void Retry()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        WaveSpawner.EnemiesAlives = 0;
+        sceneFader.FadeTo(SceneManager.GetActiveScene().name);
     }
 
     public void GotoMenu()
     {
-        Debug.Log("goto menu");
+        WaveSpawner.EnemiesAlives = 0;
+        sceneFader.FadeTo("Menu");
     }
 }

@@ -19,19 +19,19 @@ public class CameraController : MonoBehaviour
 
 
         //Make the movement of the camera
-        if (Input.GetKey("z") || Input.mousePosition.y >= Screen.height - panBorder)
+        if (Input.GetKey("z"))
         {
             transform.Translate(Vector3.forward * panSpeed * Time.deltaTime, Space.World);
         }
-        if (Input.GetKey("s") || Input.mousePosition.y <= panBorder)
+        if (Input.GetKey("s"))
         {
             transform.Translate(-Vector3.forward * panSpeed * Time.deltaTime, Space.World);
         }
-        if (Input.GetKey("q") || Input.mousePosition.x <= panBorder)
+        if (Input.GetKey("q"))
         {
             transform.Translate(Vector3.left * panSpeed * Time.deltaTime, Space.World);
         }
-        if (Input.GetKey("d") || Input.mousePosition.x >= Screen.width - panBorder)
+        if (Input.GetKey("d"))
         {
             transform.Translate(Vector3.right * panSpeed * Time.deltaTime, Space.World);
         }
