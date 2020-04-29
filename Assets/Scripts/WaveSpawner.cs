@@ -4,57 +4,65 @@ using System.Collections;
 
 public class WaveSpawner : MonoBehaviour
 {
+    public static int EnemiesAlives = 0;
     public Transform container;
     public Transform spawnPoint;
     public TMP_Text waveCountdownTimer;
 
-    public Transform ennemyPrefab;
+
 
     public float timeBetweenWaves = 7f;
     public float timeBetweenSpawn = .5f;
+
+    public Wave[] waves;
     private float countdown = 2f;
     private int waveIndex = 0;
-    private bool isSpawning = false;
     private void Update()
     {
-        if (countdown <= 0f && isSpawning == false)
+        if (EnemiesAlives > 0)
+        {
+            return;
+        }
+        if (countdown <= 0f)
         {
             StartCoroutine(SpawnWave());
+            countdown = timeBetweenWaves;
+        }
 
-        }
-        if (isSpawning == false)
-        {
-            countdown -= Time.deltaTime;
-        }
-        if (isSpawning == true)
-        {
-            waveCountdownTimer.text = "0";
-        }
-        else
-        {
-            countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+        countdown -= Time.deltaTime;
 
-            waveCountdownTimer.text = string.Format("{0:00.00}", countdown);
-        }
+        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+
+        waveCountdownTimer.text = string.Format("{0:00.00}", countdown);
+
 
     }
 
     IEnumerator SpawnWave()
     {
-        isSpawning = true;
-        waveIndex++;
         PlayerStats.waves++;
-        for (int i = 0; i < waveIndex; i++)
+
+        Wave wave = waves[waveIndex];
+
+        for (int i = 0; i < wave.count; i++)
         {
-            SpawnEnnemy();
-            yield return new WaitForSeconds(timeBetweenSpawn);
+            SpawnEnnemy(wave.enemyPrefab);
+            yield return new WaitForSeconds(1f / wave.spawnRate);
         }
-        isSpawning = false;
+        waveIndex++;
         countdown = timeBetweenWaves;
+
+        if (waveIndex == waves.Length)
+        {
+            //End Level
+            Debug.Log("Level complete");
+            this.enabled = false;
+        }
     }
 
-    void SpawnEnnemy()
+    void SpawnEnnemy(GameObject enemyPrefab)
     {
-        Instantiate(ennemyPrefab, spawnPoint.position, spawnPoint.rotation, container);
+        Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation, container);
+        EnemiesAlives++;
     }
 }

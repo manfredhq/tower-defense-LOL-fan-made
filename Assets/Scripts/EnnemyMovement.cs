@@ -50,6 +50,7 @@ public class EnnemyMovement : MonoBehaviour
     void DamagePlayer()
     {
         PlayerStats.lives--;
+        WaveSpawner.EnemiesAlives--;
         Destroy(gameObject);
     }
 
