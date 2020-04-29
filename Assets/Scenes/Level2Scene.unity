@@ -17918,8 +17918,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78a3930bb9d2b3d4d87b6863fc633a2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startMoney: 1000
-  startLives: 1
+  startMoney: 300
+  startLives: 10
 --- !u!114 &1418324671
 MonoBehaviour:
   m_ObjectHideFlags: 0
