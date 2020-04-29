@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 6968787915349987123}
   - component: {fileID: 1275259647}
   m_Layer: 0
-  m_Name: jinx_Base
+  m_Name: Jinx_Upgraded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 6263735736666586400}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0.5, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 8011632673002957138}
   m_Father: {fileID: 0}
@@ -75,10 +75,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualMode: 1
-  range: 25
+  range: 40
   turnSpeed: 10
-  bulletPrefab: {fileID: 7112470547794578447, guid: 7757b46ccc2cba64fa86204beb3ec308, type: 3}
-  fireRate: 2
+  bulletPrefab: {fileID: 7112470547794578447, guid: 1e40c5a2bad398144803e11cafa6c381, type: 3}
+  fireRate: 3
   isLaser: 0
   DOT: 30
   slowPercent: 0.5
