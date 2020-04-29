@@ -177,7 +177,7 @@ PrefabInstance:
     - target: {fileID: 198276084707855636, guid: fd985752c1809dc42b7088c871ea2fc9, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 0a0c2554d97910b4d82ed23fae00a17e, type: 3}
+      objectReference: {fileID: 21300000, guid: 1b228faca504d12489e6e144500ea87b, type: 3}
     - target: {fileID: 198276084707855638, guid: fd985752c1809dc42b7088c871ea2fc9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -596,6 +596,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 5889261493947090481}
     m_Modifications:
+    - target: {fileID: 1600349514, guid: fd985752c1809dc42b7088c871ea2fc9, type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1600349514, guid: fd985752c1809dc42b7088c871ea2fc9, type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1600349514, guid: fd985752c1809dc42b7088c871ea2fc9, type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1600349514, guid: fd985752c1809dc42b7088c871ea2fc9, type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 198276084707855633, guid: fd985752c1809dc42b7088c871ea2fc9, type: 3}
       propertyPath: m_Name
       value: StandartTurretItem
