@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 299914288099356413}
   - component: {fileID: 5934796735713959922}
   - component: {fileID: 7357410518197040654}
+  - component: {fileID: 5690261419090343851}
   m_Layer: 0
   m_Name: HammerMinion
   m_TagString: Enemy
@@ -46,13 +47,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  hpBar: {fileID: 0}
   startSpeed: 10
   startHp: 100
   currentHp: 0
   moneyValue: 15
   deathEffect: {fileID: 3382960836113860337, guid: b6bbc9388d4349f47b3ff094b6dead7a, type: 3}
   hpBarCanvas: {fileID: 6761151840423629572, guid: 04291cb8529bdeb48a361afb9d56749f, type: 3}
-  hpBar: {fileID: 0}
 --- !u!114 &7357410518197040654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,6 +66,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54391d35e0727d846b83de3213be445e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!136 &5690261419090343851
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 299914288099356412}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.4221226
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.2110613, z: 0}
 --- !u!1 &2419876885955869538
 GameObject:
   m_ObjectHideFlags: 0
