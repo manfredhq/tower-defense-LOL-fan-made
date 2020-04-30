@@ -289,6 +289,7 @@ GameObject:
   - component: {fileID: 775487202226672903}
   - component: {fileID: 1719245889018408444}
   - component: {fileID: 8497348106343994109}
+  - component: {fileID: 4201549760672732069}
   m_Layer: 0
   m_Name: viktor_Upgraded
   m_TagString: Untagged
@@ -305,7 +306,7 @@ Transform:
   m_GameObject: {fileID: 775487202226672896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children:
   - {fileID: 3722468837394076821}
   - {fileID: 9219034628795815170}
@@ -383,6 +384,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 775487202226672903}
   turret: {fileID: 1719245889018408444}
+--- !u!114 &4201549760672732069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775487202226672896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c702d3b6c8750b49a4084e924795ec9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turret: {fileID: 1719245889018408444}
+  manaMax: 50
+  manaGain: 10
+  currentMana: 0
+  fireRateBonus: 0.5
+  timeComp: 4
+  ultimatePrefab: {fileID: 4230882628912633774, guid: 182a909b3f9f69540abee20812792eeb, type: 3}
 --- !u!1 &809008903379475857
 GameObject:
   m_ObjectHideFlags: 0
