@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8197488137911062332}
   - component: {fileID: 2148366994820607399}
   m_Layer: 0
-  m_Name: jinx_Base
+  m_Name: jinx_Upgraded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 134598133411810002}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 13.5, y: 0, z: 44.5}
-  m_LocalScale: {x: 0.025, y: 0.025, z: 0.025}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children:
   - {fileID: 8394964650895547923}
   - {fileID: 4843103688621639190}
@@ -89,11 +89,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualMode: 1
-  range: 25
+  range: 40
   turnSpeed: 10
   attackScript: {fileID: 9137636909010194956}
-  bulletPrefab: {fileID: 7112470547794578447, guid: 7757b46ccc2cba64fa86204beb3ec308, type: 3}
-  fireRate: 2
+  bulletPrefab: {fileID: 7112470547794578447, guid: 1e40c5a2bad398144803e11cafa6c381, type: 3}
+  fireRate: 3
   isLaser: 0
   DOT: 30
   slowPercent: 0.5
@@ -118,9 +118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a35f5cf1abb25449b6e0a1c44b38895, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turret: {fileID: 8197488137911062332}
-  fireRateAugmentRate: 0.05
-  maxStack: 5
+  turret: {fileID: 3978576855111083895, guid: c04827022d3505844a3d42490908ce18, type: 3}
+  fireRateAugmentRate: 0.09
+  maxStack: 7
 --- !u!1 &240081352822709732
 GameObject:
   m_ObjectHideFlags: 0

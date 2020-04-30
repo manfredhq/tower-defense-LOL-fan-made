@@ -48,6 +48,7 @@ MonoBehaviour:
   actualMode: 1
   range: 40
   turnSpeed: 10
+  attackScript: {fileID: 0}
   bulletPrefab: {fileID: 7112470547794578447, guid: 1e40c5a2bad398144803e11cafa6c381, type: 3}
   fireRate: 3
   isLaser: 0
@@ -56,6 +57,7 @@ MonoBehaviour:
   lineRenderer: {fileID: 0}
   impactEffect: {fileID: 0}
   impactLight: {fileID: 0}
+  target: {fileID: 0}
   timeShooted: 0
   partToRotate: {fileID: 7566953940603373151}
   firePoint: {fileID: 8275203144148516215}
@@ -101,7 +103,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7438526280477459177}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: 0.9974642, z: -0, w: -0.07117084}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
