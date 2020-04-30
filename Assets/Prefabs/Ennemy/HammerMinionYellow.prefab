@@ -52,6 +52,8 @@ MonoBehaviour:
   startHp: 200
   currentHp: 0
   moneyValue: 30
+  armor: 25
+  magicResistance: 25
   deathEffect: {fileID: 3382960836113860337, guid: b6bbc9388d4349f47b3ff094b6dead7a, type: 3}
   hpBarCanvas: {fileID: 6761151840423629572, guid: 04291cb8529bdeb48a361afb9d56749f, type: 3}
 --- !u!114 &7357410518197040654

@@ -8,6 +8,8 @@ public class ViktorUltimate : MonoBehaviour
     public float speed = 30f;
     public int tickDamage = 30;
     public float timeBetweenTick = .5f;
+    public Turret.damageType typeOfDamage;
+
 
     private float lastTick;
     private GameObject selfTarget;
@@ -51,7 +53,7 @@ public class ViktorUltimate : MonoBehaviour
             //apply damage
             foreach (GameObject enemy in enemyInRange)
             {
-                enemy.GetComponent<Ennemy>().TakeDamage(tickDamage);
+                enemy.GetComponent<Ennemy>().TakeDamage(tickDamage, typeOfDamage);
             }
 
             lastTick = Time.time;

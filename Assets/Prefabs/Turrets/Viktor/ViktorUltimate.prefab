@@ -114,9 +114,7 @@ MonoBehaviour:
   speed: 30
   tickDamage: 60
   timeBetweenTick: 0.5
-  lastTick: 0
-  selfTarget: {fileID: 0}
-  enemyInRange: []
+  typeOfDamage: 1
 --- !u!54 &350878076720981937
 Rigidbody:
   m_ObjectHideFlags: 0
