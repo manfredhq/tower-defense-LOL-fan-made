@@ -19266,10 +19266,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1462326274}
     m_Modifications:
-    - target: {fileID: 5832238506873773324, guid: 5e852182598e3374c8f735d9401fea13, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SelectViktor
-      objectReference: {fileID: 0}
     - target: {fileID: 5832238506873773325, guid: 5e852182598e3374c8f735d9401fea13, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -19294,10 +19290,6 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5832238506873773327, guid: 5e852182598e3374c8f735d9401fea13, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b0a0045d4902bd345a34126e08ca505c, type: 3}
     - target: {fileID: 5889261493947090481, guid: 5e852182598e3374c8f735d9401fea13, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -19385,14 +19377,6 @@ PrefabInstance:
     - target: {fileID: 5889261493947090494, guid: 5e852182598e3374c8f735d9401fea13, type: 3}
       propertyPath: m_Name
       value: 'Shop '
-      objectReference: {fileID: 0}
-    - target: {fileID: 5922283027953890641, guid: 5e852182598e3374c8f735d9401fea13, type: 3}
-      propertyPath: m_text
-      value: 200$
-      objectReference: {fileID: 0}
-    - target: {fileID: 5922283027953890641, guid: 5e852182598e3374c8f735d9401fea13, type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6015321652152061769, guid: 5e852182598e3374c8f735d9401fea13, type: 3}
       propertyPath: m_AnchorMin.y
