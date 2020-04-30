@@ -13,6 +13,9 @@ public class Ennemy : MonoBehaviour
     public float startHp = 100;
     public float currentHp;
     public int moneyValue = 15;
+    public float armor;
+    public float magicResistance;
+
     public GameObject deathEffect;
     public GameObject hpBarCanvas;
 
@@ -46,9 +49,24 @@ public class Ennemy : MonoBehaviour
         Destroy(gameObject);
     }
 
-    public void TakeDamage(float amount)
+    public void TakeDamage(float amount, Turret.damageType type)
     {
-        currentHp -= amount;
+        //physical
+        if (type == Turret.damageType.Physical)
+        {
+            currentHp -= amount - (amount * (armor / 100));
+        }
+        //magic
+        else if (type == Turret.damageType.Magical)
+        {
+            currentHp -= amount - (amount * (magicResistance / 100));
+        }
+        //true damage
+        else
+        {
+            currentHp -= amount;
+        }
+
 
         hpBar.fillAmount = currentHp / startHp;
         if (currentHp <= 0 && isAlive)
