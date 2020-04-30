@@ -1908,9 +1908,9 @@ GameObject:
   - component: {fileID: 7714430267811210217}
   - component: {fileID: 5878148750386305552}
   - component: {fileID: 5878148750386305551}
-  - component: {fileID: 8628045653285390210}
+  - component: {fileID: 8668653245653129746}
   m_Layer: 0
-  m_Name: Tristana
+  m_Name: Tristana_Upgraded
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1925,7 +1925,7 @@ Transform:
   m_GameObject: {fileID: 7714430267811210218}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.02, y: 0.02, z: 0.02}
+  m_LocalScale: {x: 0.03, y: 0.03, z: 0.03}
   m_Children:
   - {fileID: 2184807539702413099}
   - {fileID: 3019434970896985902}
@@ -1986,11 +1986,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualMode: 1
-  range: 25
+  range: 30
   turnSpeed: 10
   attackScript: {fileID: 5878148750386305552}
-  bulletPrefab: {fileID: 5338888209294085494, guid: e0d98aa4646286641950e10d7241b3ec, type: 3}
-  fireRate: 2.5
+  bulletPrefab: {fileID: 5338888209294085494, guid: 1f5d9714ed5c7ac419db18245302ce4d, type: 3}
+  fireRate: 3
   isLaser: 0
   DOT: 30
   slowPercent: 0.5
@@ -2003,7 +2003,7 @@ MonoBehaviour:
   firePoint: {fileID: 497604977543374687}
   ennemyTag: Enemy
   containerTag: EnnemyContainer
---- !u!114 &8628045653285390210
+--- !u!114 &8668653245653129746
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2017,10 +2017,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   turret: {fileID: 5878148750386305551}
   manaMax: 100
-  manaGain: 10
+  manaGain: 12
   currentMana: 0
-  fireRateBonus: 2
-  timeComp: 4
+  fireRateBonus: 3
+  timeComp: 5
 --- !u!1 &7923773777659403735
 GameObject:
   m_ObjectHideFlags: 0
