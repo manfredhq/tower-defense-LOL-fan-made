@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
+    public enum damageType { Physical, Magical, True };
+    [Header("Target system")]
+    public damageType typeOfDamage;
 
     public enum shootMode { Closer, First };
     [Header("Target system")]
@@ -112,7 +115,7 @@ public class Turret : MonoBehaviour
 
     private void Laser()
     {
-        ennemy.TakeDamage(DOT * Time.deltaTime);
+        ennemy.TakeDamage(DOT * Time.deltaTime, typeOfDamage);
         ennemy.Slow(slowPercent);
 
         if (!lineRenderer.enabled)

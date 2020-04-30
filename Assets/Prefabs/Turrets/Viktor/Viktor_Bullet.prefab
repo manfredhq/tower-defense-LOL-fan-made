@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5338888209294085492}
   - component: {fileID: 1707538063815836689}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Viktor_Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -94,6 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77cd35a1c61a9a14794f9ae998a8d09c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typeOfDamage: 1
   speed: 15
   damage: 25
   impactEffect: {fileID: 4547015786090912869, guid: 180f7d82de0fdbd4aa10252f5d9a3b39, type: 3}

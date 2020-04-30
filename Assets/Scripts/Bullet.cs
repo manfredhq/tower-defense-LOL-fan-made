@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public Turret.damageType typeOfDamage;
+
     private Transform target;
 
     public float speed = 8f;
@@ -63,7 +65,7 @@ public class Bullet : MonoBehaviour
 
         if (e != null)
         {
-            e.TakeDamage(damage);
+            e.TakeDamage(damage, typeOfDamage);
         }
         Destroy(gameObject);
     }

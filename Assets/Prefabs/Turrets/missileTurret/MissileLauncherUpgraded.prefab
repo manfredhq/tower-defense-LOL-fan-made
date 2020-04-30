@@ -189,9 +189,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df57b8d1a94e3064bb0b3d55d91eae3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  typeOfDamage: 2
   actualMode: 1
   range: 35
   turnSpeed: 10
+  attackScript: {fileID: 0}
   bulletPrefab: {fileID: 1814238596239172363, guid: 6047c41a74779e440a2e2e2e8f5fd1b2, type: 3}
   fireRate: 0.4
   isLaser: 0
@@ -200,6 +202,8 @@ MonoBehaviour:
   lineRenderer: {fileID: 0}
   impactEffect: {fileID: 0}
   impactLight: {fileID: 0}
+  target: {fileID: 0}
+  timeShooted: 0
   partToRotate: {fileID: 4306925930903948939}
   firePoint: {fileID: 4306925931469906018}
   ennemyTag: Enemy
