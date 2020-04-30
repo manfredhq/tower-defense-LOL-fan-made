@@ -846,7 +846,7 @@ PrefabInstance:
       objectReference: {fileID: 5889261493947090485}
     - target: {fileID: 198276084707855639, guid: fd985752c1809dc42b7088c871ea2fc9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SelectJinx
+      value: SelectTristana
       objectReference: {fileID: 0}
     - target: {fileID: 198276084707855639, guid: fd985752c1809dc42b7088c871ea2fc9, type: 3}
       propertyPath: m_Colors.m_NormalColor.g
