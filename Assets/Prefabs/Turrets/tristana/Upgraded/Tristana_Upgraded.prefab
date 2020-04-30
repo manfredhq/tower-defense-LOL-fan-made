@@ -1952,7 +1952,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 32433bcb657fcc445a8c6f5fd03e0bc2, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -1989,7 +1989,7 @@ MonoBehaviour:
   range: 30
   turnSpeed: 10
   attackScript: {fileID: 5878148750386305552}
-  bulletPrefab: {fileID: 5338888209294085494, guid: e0d98aa4646286641950e10d7241b3ec, type: 3}
+  bulletPrefab: {fileID: 5338888209294085494, guid: 1f5d9714ed5c7ac419db18245302ce4d, type: 3}
   fireRate: 3
   isLaser: 0
   DOT: 30
@@ -2015,6 +2015,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bebe088871687a74e8f43aa9cb5ba398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turret: {fileID: 5878148750386305551}
+  manaMax: 100
+  manaGain: 12
+  currentMana: 0
+  fireRateBonus: 3
+  timeComp: 5
 --- !u!1 &7923773777659403735
 GameObject:
   m_ObjectHideFlags: 0
