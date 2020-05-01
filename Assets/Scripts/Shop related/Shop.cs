@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
-
+    public ShopBlueprint[] shopTurret;
+    public int nbTurret;
     public TurretBlueprint standartTurret;
     public TurretBlueprint missileLauncher;
     public TurretBlueprint laserBeamer;
@@ -15,7 +17,23 @@ public class Shop : MonoBehaviour
 
     private void Start()
     {
+        Roll();
         buildManager = BuildManager.instance;
+    }
+
+    void Roll()
+    {
+        //TODO: change the way it work, I'm busy and it's late
+        for (int i = 0; i < nbTurret; i++)
+        {
+            int random = Random.Range(0, shopTurret.Length);
+            GameObject obj = Instantiate(shopTurret[random].shopPrefab, transform);
+            //obj.GetComponent<Button>().onClick.AddListener(delegate () { shopTurret[random].function.Invoke(); });
+            //obj.GetComponent<Button>().onClick += shopTurret[random].function;
+            obj.GetComponent<Button>().onClick.AddListener(shopTurret[random].functionName);
+
+        }
+
     }
     public void SelectStandartTurret()
     {
