@@ -27056,22 +27056,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5889261493947090485, guid: 5e852182598e3374c8f735d9401fea13, type: 3}
-      propertyPath: shopTurret.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5889261493947090485, guid: 5e852182598e3374c8f735d9401fea13, type: 3}
-      propertyPath: shopTurret.Array.data[0].function.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5889261493947090485, guid: 5e852182598e3374c8f735d9401fea13, type: 3}
-      propertyPath: shopTurret.Array.data[0].function.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5889261493947090485, guid: 5e852182598e3374c8f735d9401fea13, type: 3}
-      propertyPath: shopTurret.Array.data[0].function.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5889261493947090494, guid: 5e852182598e3374c8f735d9401fea13, type: 3}
       propertyPath: m_Name
       value: Shop
