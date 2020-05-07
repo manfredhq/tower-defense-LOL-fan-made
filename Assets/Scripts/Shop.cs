@@ -1,11 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
-    public int nbTurret;
+
     public TurretBlueprint standartTurret;
     public TurretBlueprint missileLauncher;
     public TurretBlueprint laserBeamer;
@@ -18,40 +17,39 @@ public class Shop : MonoBehaviour
     {
         buildManager = BuildManager.instance;
     }
-
-    public void SelectStandartTurret(ChampShop champShop)
+    public void SelectStandartTurret()
     {
         Debug.Log("standart turret selected");
-        buildManager.SelectTurretToBuild(standartTurret, champShop);
+        buildManager.SelectTurretToBuild(standartTurret);
     }
-    public void SelectMissileTurret(ChampShop champShop)
+    public void SelectMissileTurret()
     {
         Debug.Log("Missile turret selected");
-        buildManager.SelectTurretToBuild(missileLauncher, champShop);
+        buildManager.SelectTurretToBuild(missileLauncher);
     }
 
-    public void SelectLaserBeamer(ChampShop champShop)
+    public void SelectLaserBeamer()
     {
         Debug.Log("Laser turret selected");
-        buildManager.SelectTurretToBuild(laserBeamer, champShop);
+        buildManager.SelectTurretToBuild(laserBeamer);
     }
 
-    public void SelectJinx(ChampShop champShop)
+    public void SelectJinx()
     {
         Debug.Log("Jinx turret selected");
-        buildManager.SelectTurretToBuild(jinx, champShop);
+        buildManager.SelectTurretToBuild(jinx);
     }
 
-    public void SelectTristana(ChampShop champShop)
+    public void SelectTristana()
     {
         Debug.Log("Tristana turret selected");
-        buildManager.SelectTurretToBuild(tristana, champShop);
+        buildManager.SelectTurretToBuild(tristana);
     }
 
-    public void SelectViktor(ChampShop champShop)
+    public void SelectViktor()
     {
         Debug.Log("Viktor turret selected");
-        buildManager.SelectTurretToBuild(viktor, champShop);
+        buildManager.SelectTurretToBuild(viktor);
     }
 
 
