@@ -118,56 +118,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopTurret:
   - shopPrefab: {fileID: 2600203507303273520, guid: 4c8651048fe51ea4fae07d3570cb90c2, type: 3}
-    function:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 5889261493947090485}
-          m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-          m_MethodName: SelectJinx
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    name: 
   - shopPrefab: {fileID: 8699063292836536343, guid: 3821ca13ac8197a44aef0922ea132c7b, type: 3}
-    function:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 5889261493947090485}
-          m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-          m_MethodName: SelectTristana
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    name: 
   - shopPrefab: {fileID: 4239461480744999177, guid: 0bad3e85cf5192841b234fda6886311a, type: 3}
-    function:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 5889261493947090485}
-          m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-          m_MethodName: SelectViktor
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-    name: 
   nbTurret: 4
   standartTurret:
     prefab: {fileID: 120265272668434637, guid: 531c359a87f04e9489a2e45b21327638, type: 3}
@@ -213,19 +165,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shopTurret:
   - shopPrefab: {fileID: 2600203507303273520, guid: 4c8651048fe51ea4fae07d3570cb90c2, type: 3}
-    function:
-      m_PersistentCalls:
-        m_Calls: []
-    name: jinx
   - shopPrefab: {fileID: 8699063292836536343, guid: 3821ca13ac8197a44aef0922ea132c7b, type: 3}
-    function:
-      m_PersistentCalls:
-        m_Calls: []
-    name: tristana
   - shopPrefab: {fileID: 4239461480744999177, guid: 0bad3e85cf5192841b234fda6886311a, type: 3}
-    function:
-      m_PersistentCalls:
-        m_Calls: []
-    name: viktor
   nbTurret: 4
   shop: {fileID: 5889261493947090485}

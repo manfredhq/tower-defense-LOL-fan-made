@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -11,24 +12,26 @@ public class ShopRandomizer : MonoBehaviour
 
     public Shop shop;
     public ChampShop[] champShop;
+
+    private List<GameObject> turretList = new List<GameObject>();
     private void Start()
     {
         Roll();
     }
 
-    void Roll()
+    public void Roll()
     {
+        foreach (GameObject turret in turretList)
+        {
+            Destroy(turret);
+        }
         //TODO: change the way it work, I'm busy and it's late
         for (int i = 0; i < nbTurret; i++)
         {
             int random = Random.Range(0, shopTurret.Length);
             GameObject obj = Instantiate(shopTurret[random].shopPrefab, transform);
-            var test = obj.GetComponent<ChampShop>();
+            turretList.Add(obj);
             obj.GetComponent<ChampShop>().Init(shop);
-            //SetupButton(obj.GetComponent<Button>(), shopTurret[random].name);
-            //obj.GetComponent<Button>().onClick.AddListener(delegate () { shopTurret[random].function.Invoke(); });
-
-            //obj.GetComponent<Button>().onClick.AddListener(() => { shopTurret[random].function.in; });
 
         }
 
