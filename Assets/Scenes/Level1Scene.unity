@@ -26922,7 +26922,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3281128033413524205, guid: 5e852182598e3374c8f735d9401fea13, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5832238506873773325, guid: 5e852182598e3374c8f735d9401fea13, type: 3}
       propertyPath: m_AnchorMin.y
