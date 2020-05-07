@@ -17,7 +17,7 @@ public class Shop : MonoBehaviour
 
     private void Start()
     {
-        Roll();
+        //Roll();
         buildManager = BuildManager.instance;
     }
 
@@ -28,9 +28,6 @@ public class Shop : MonoBehaviour
         {
             int random = Random.Range(0, shopTurret.Length);
             GameObject obj = Instantiate(shopTurret[random].shopPrefab, transform);
-            //obj.GetComponent<Button>().onClick.AddListener(delegate () { shopTurret[random].function.Invoke(); });
-            //obj.GetComponent<Button>().onClick += shopTurret[random].function;
-            obj.GetComponent<Button>().onClick.AddListener(shopTurret[random].functionName);
 
         }
 

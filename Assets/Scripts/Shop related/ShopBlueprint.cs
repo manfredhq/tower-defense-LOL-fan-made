@@ -9,6 +9,4 @@ using UnityEngine.UIElements;
 public class ShopBlueprint
 {
     public GameObject shopPrefab;
-    public UnityEvent function;
-    public string functionName;
 }

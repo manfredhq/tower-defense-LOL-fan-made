@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2600203507303273525}
   - component: {fileID: 2600203507303273526}
   - component: {fileID: 2600203507303273531}
+  - component: {fileID: 5048322971657837981}
   m_Layer: 5
   m_Name: JinxTurret
   m_TagString: Untagged
@@ -121,13 +122,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 5048322971657837981}
+        m_TargetAssemblyTypeName: JinxShop, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -153,6 +154,19 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &5048322971657837981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2600203507303273520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b92008736f796df4bad48a57c81e5ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shop: {fileID: 0}
 --- !u!1 &2798332254879595625
 GameObject:
   m_ObjectHideFlags: 0

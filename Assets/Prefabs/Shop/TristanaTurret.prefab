@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8699063292836536338}
   - component: {fileID: 8699063292836536337}
   - component: {fileID: 8699063292836536348}
+  - component: {fileID: 3962410597272196483}
   m_Layer: 5
   m_Name: TristanaTurret
   m_TagString: Untagged
@@ -121,9 +122,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Shop, Assembly-CSharp
-        m_MethodName: SelectTristana
+      - m_Target: {fileID: 3962410597272196483}
+        m_TargetAssemblyTypeName: TristanaShop, Assembly-CSharp
+        m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -153,6 +154,18 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &3962410597272196483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8699063292836536343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60106aa5fae7ee94299cfdf4d21975bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8825134378192308302
 GameObject:
   m_ObjectHideFlags: 0

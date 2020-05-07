@@ -10,6 +10,7 @@ public class ShopRandomizer : MonoBehaviour
     public int nbTurret;
 
     public Shop shop;
+    public ChampShop[] champShop;
     private void Start()
     {
         Roll();
@@ -22,6 +23,8 @@ public class ShopRandomizer : MonoBehaviour
         {
             int random = Random.Range(0, shopTurret.Length);
             GameObject obj = Instantiate(shopTurret[random].shopPrefab, transform);
+            var test = obj.GetComponent<ChampShop>();
+            obj.GetComponent<ChampShop>().Init(shop);
             //SetupButton(obj.GetComponent<Button>(), shopTurret[random].name);
             //obj.GetComponent<Button>().onClick.AddListener(delegate () { shopTurret[random].function.Invoke(); });
 
