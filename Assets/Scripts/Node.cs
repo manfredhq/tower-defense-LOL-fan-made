@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Node : MonoBehaviour
 {
@@ -45,7 +46,7 @@ public class Node : MonoBehaviour
         }
 
 
-        BuildTurret(buildManager.GetTurretToBuild());
+        BuildTurret(buildManager.GetTurretToBuild(), buildManager.GetChampShop());
     }
 
     public void UpgradeTurret()
@@ -82,13 +83,16 @@ public class Node : MonoBehaviour
         turretBlueprint = null;
     }
 
-    private void BuildTurret(TurretBlueprint blueprint)
+    private void BuildTurret(TurretBlueprint blueprint, ChampShop champShop)
     {
         if (PlayerStats.money < blueprint.cost)
         {
             Debug.Log("not enough money");
             return;
         }
+
+        champShop.GetGameObject().GetComponent<Button>().interactable = false;
+        buildManager.TurretBuild();
 
         turretBlueprint = blueprint;
 

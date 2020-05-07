@@ -23,15 +23,16 @@ public class BuildManager : MonoBehaviour
 
     private TurretBlueprint turretToBuild;
     private Node selectedNode;
+    private ChampShop champShop;
 
     public bool CanBuild { get { return turretToBuild != null; } }
     public bool HasMoney { get { return PlayerStats.money >= turretToBuild.cost; } }
 
-    public void SelectTurretToBuild(TurretBlueprint turret)
+    public void SelectTurretToBuild(TurretBlueprint turret, ChampShop champShopGiven)
     {
         turretToBuild = turret;
         selectedNode = null;
-
+        champShop = champShopGiven;
         DeselectNode();
     }
 
@@ -43,6 +44,7 @@ public class BuildManager : MonoBehaviour
             return;
         }
         selectedNode = node;
+        champShop = null;
         turretToBuild = null;
 
         turretUI.SetTarget(node);
@@ -57,5 +59,15 @@ public class BuildManager : MonoBehaviour
     public TurretBlueprint GetTurretToBuild()
     {
         return turretToBuild;
+    }
+
+    public ChampShop GetChampShop()
+    {
+        return champShop;
+    }
+
+    public void TurretBuild()
+    {
+        turretToBuild = null;
     }
 }
