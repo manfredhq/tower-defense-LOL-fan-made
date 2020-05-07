@@ -11193,6 +11193,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 926368469}
   m_CullTransparentMesh: 0
+--- !u!114 &932170872 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3281128033413524205, guid: 5e852182598e3374c8f735d9401fea13, type: 3}
+  m_PrefabInstance: {fileID: 5889261493151160313}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8243ef82156364f488c36726e724c12f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &935890543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15307,6 +15318,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RollButton
       objectReference: {fileID: 0}
+    - target: {fileID: 7858257703405922937, guid: 0a96bbf7c3c65e342b9278fe39159e65, type: 3}
+      propertyPath: randomizer
+      value: 
+      objectReference: {fileID: 932170872}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a96bbf7c3c65e342b9278fe39159e65, type: 3}
 --- !u!224 &1219890870 stripped
