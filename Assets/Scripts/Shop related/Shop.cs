@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Shop : MonoBehaviour
 {
-    public ShopBlueprint[] shopTurret;
     public int nbTurret;
     public TurretBlueprint standartTurret;
     public TurretBlueprint missileLauncher;
@@ -17,54 +16,42 @@ public class Shop : MonoBehaviour
 
     private void Start()
     {
-        //Roll();
         buildManager = BuildManager.instance;
     }
 
-    void Roll()
-    {
-        //TODO: change the way it work, I'm busy and it's late
-        for (int i = 0; i < nbTurret; i++)
-        {
-            int random = Random.Range(0, shopTurret.Length);
-            GameObject obj = Instantiate(shopTurret[random].shopPrefab, transform);
-
-        }
-
-    }
-    public void SelectStandartTurret()
+    public void SelectStandartTurret(ChampShop champShop)
     {
         Debug.Log("standart turret selected");
-        buildManager.SelectTurretToBuild(standartTurret);
+        buildManager.SelectTurretToBuild(standartTurret, champShop);
     }
-    public void SelectMissileTurret()
+    public void SelectMissileTurret(ChampShop champShop)
     {
         Debug.Log("Missile turret selected");
-        buildManager.SelectTurretToBuild(missileLauncher);
+        buildManager.SelectTurretToBuild(missileLauncher, champShop);
     }
 
-    public void SelectLaserBeamer()
+    public void SelectLaserBeamer(ChampShop champShop)
     {
         Debug.Log("Laser turret selected");
-        buildManager.SelectTurretToBuild(laserBeamer);
+        buildManager.SelectTurretToBuild(laserBeamer, champShop);
     }
 
-    public void SelectJinx()
+    public void SelectJinx(ChampShop champShop)
     {
         Debug.Log("Jinx turret selected");
-        buildManager.SelectTurretToBuild(jinx);
+        buildManager.SelectTurretToBuild(jinx, champShop);
     }
 
-    public void SelectTristana()
+    public void SelectTristana(ChampShop champShop)
     {
         Debug.Log("Tristana turret selected");
-        buildManager.SelectTurretToBuild(tristana);
+        buildManager.SelectTurretToBuild(tristana, champShop);
     }
 
-    public void SelectViktor()
+    public void SelectViktor(ChampShop champShop)
     {
         Debug.Log("Viktor turret selected");
-        buildManager.SelectTurretToBuild(viktor);
+        buildManager.SelectTurretToBuild(viktor, champShop);
     }
 
 

@@ -36,20 +36,4 @@ public class ShopRandomizer : MonoBehaviour
         }
 
     }
-
-    void SetupButton(Button obj, string name)
-    {
-        if (name == "jinx")
-        {
-            obj.onClick.AddListener(delegate () { shop.SelectJinx(); });
-        }
-        else if (name == "viktor")
-        {
-            obj.onClick.AddListener(() => { shop.SelectViktor(); });
-        }
-        else if (name == "tristana")
-        {
-            obj.onClick.AddListener(delegate () { shop.SelectTristana(); });
-        }
-    }
 }

@@ -8,11 +8,16 @@ public class TristanaShop : MonoBehaviour, ChampShop
 
     public void OnClick()
     {
-        shop.SelectTristana();
+        shop.SelectTristana(this);
     }
 
     public void Init(Shop shopGiven)
     {
         shop = shopGiven;
+    }
+
+    public GameObject GetGameObject()
+    {
+        return gameObject;
     }
 }

@@ -8,11 +8,16 @@ public class JinxShop : MonoBehaviour, ChampShop
 
     public void OnClick()
     {
-        shop.SelectJinx();
+        shop.SelectJinx(this);
     }
 
     public void Init(Shop shopGiven)
     {
         shop = shopGiven;
+    }
+
+    public GameObject GetGameObject()
+    {
+        return gameObject;
     }
 }

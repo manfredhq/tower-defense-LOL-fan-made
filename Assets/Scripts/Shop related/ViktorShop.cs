@@ -8,11 +8,16 @@ public class ViktorShop : MonoBehaviour, ChampShop
 
     public void OnClick()
     {
-        shop.SelectViktor();
+        shop.SelectViktor(this);
     }
 
     public void Init(Shop shopGiven)
     {
         shop = shopGiven;
+    }
+
+    public GameObject GetGameObject()
+    {
+        return gameObject;
     }
 }
