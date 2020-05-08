@@ -24,7 +24,7 @@ public class WaveSpawner : MonoBehaviour
         {
             return;
         }
-        if (waveIndex == waves.Length)
+        if (waveIndex == waves.Length && !gameManager.GetGameStatus())
         {
             //End Level
             gameManager.WinLevel();

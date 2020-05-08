@@ -36,4 +36,9 @@ public class GameManager : MonoBehaviour
         isGameEnded = true;
         completeLevelUI.SetActive(true);
     }
+
+    public bool GetGameStatus()
+    {
+        return isGameEnded;
+    }
 }
