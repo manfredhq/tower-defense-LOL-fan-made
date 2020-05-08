@@ -18310,17 +18310,123 @@ MonoBehaviour:
   waves:
   - subWaves:
     - enemyPrefab: {fileID: 299914288099356412, guid: be522cd17cb6b8d4aaf80db972b0985c, type: 3}
-      count: 3
-      spawnRate: 4
+      count: 2
+      spawnRate: 2
       startSpawn: 0
     - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
       count: 2
-      spawnRate: 0.2
-      startSpawn: 2
-    - enemyPrefab: {fileID: 299914288099356412, guid: dde7acdc7db6d6d4b8be4f0726552a18, type: 3}
-      count: 4
       spawnRate: 1
+      startSpawn: 0.5
+  - subWaves:
+    - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
+      count: 3
+      spawnRate: 2
+      startSpawn: 0
+    - enemyPrefab: {fileID: 299914288099356412, guid: dde7acdc7db6d6d4b8be4f0726552a18, type: 3}
+      count: 2
+      spawnRate: 3.5
+      startSpawn: 1.25
+  - subWaves:
+    - enemyPrefab: {fileID: 299914288099356412, guid: be522cd17cb6b8d4aaf80db972b0985c, type: 3}
+      count: 10
+      spawnRate: 2.5
+      startSpawn: 0
+  - subWaves:
+    - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
+      count: 12
+      spawnRate: 3
+      startSpawn: 0
+  - subWaves:
+    - enemyPrefab: {fileID: 299914288099356412, guid: be522cd17cb6b8d4aaf80db972b0985c, type: 3}
+      count: 8
+      spawnRate: 3
+      startSpawn: 0
+    - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
+      count: 7
+      spawnRate: 2.5
+      startSpawn: 0.5
+  - subWaves:
+    - enemyPrefab: {fileID: 299914288099356412, guid: dde7acdc7db6d6d4b8be4f0726552a18, type: 3}
+      count: 15
+      spawnRate: 2.5
+      startSpawn: 0
+  - subWaves:
+    - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
+      count: 8
+      spawnRate: 2.66
+      startSpawn: 0
+    - enemyPrefab: {fileID: 299914288099356412, guid: dde7acdc7db6d6d4b8be4f0726552a18, type: 3}
+      count: 5
+      spawnRate: 3
+      startSpawn: 1.5
+    - enemyPrefab: {fileID: 299914288099356412, guid: be522cd17cb6b8d4aaf80db972b0985c, type: 3}
+      count: 15
+      spawnRate: 4
+      startSpawn: 1.33
+    - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
+      count: 15
+      spawnRate: 3.5
+      startSpawn: 0.5
+  - subWaves:
+    - enemyPrefab: {fileID: 299914288099356412, guid: be522cd17cb6b8d4aaf80db972b0985c, type: 3}
+      count: 19
+      spawnRate: 5
+      startSpawn: 0
+    - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
+      count: 18
+      spawnRate: 4.3
       startSpawn: 2
+  - subWaves:
+    - enemyPrefab: {fileID: 299914288099356412, guid: dde7acdc7db6d6d4b8be4f0726552a18, type: 3}
+      count: 15
+      spawnRate: 3.5
+      startSpawn: 0
+  - subWaves:
+    - enemyPrefab: {fileID: 299914288099356412, guid: be522cd17cb6b8d4aaf80db972b0985c, type: 3}
+      count: 20
+      spawnRate: 5
+      startSpawn: 0
+    - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
+      count: 20
+      spawnRate: 4
+      startSpawn: 0.5
+    - enemyPrefab: {fileID: 299914288099356412, guid: dde7acdc7db6d6d4b8be4f0726552a18, type: 3}
+      count: 15
+      spawnRate: 3
+      startSpawn: 1.25
+  - subWaves:
+    - enemyPrefab: {fileID: 299914288099356412, guid: be522cd17cb6b8d4aaf80db972b0985c, type: 3}
+      count: 8
+      spawnRate: 3
+      startSpawn: 0
+    - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
+      count: 10
+      spawnRate: 2.5
+      startSpawn: 0.33
+    - enemyPrefab: {fileID: 299914288099356412, guid: be522cd17cb6b8d4aaf80db972b0985c, type: 3}
+      count: 15
+      spawnRate: 4
+      startSpawn: 6
+    - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
+      count: 15
+      spawnRate: 4
+      startSpawn: 0.25
+    - enemyPrefab: {fileID: 299914288099356412, guid: be522cd17cb6b8d4aaf80db972b0985c, type: 3}
+      count: 25
+      spawnRate: 4
+      startSpawn: 5.5
+    - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
+      count: 22
+      spawnRate: 3.8
+      startSpawn: 0.33
+    - enemyPrefab: {fileID: 299914288099356412, guid: dde7acdc7db6d6d4b8be4f0726552a18, type: 3}
+      count: 19
+      spawnRate: 3.5
+      startSpawn: 0.33
+  - subWaves: []
+  - subWaves: []
+  - subWaves: []
+  - subWaves: []
 --- !u!114 &1418324669
 MonoBehaviour:
   m_ObjectHideFlags: 0
