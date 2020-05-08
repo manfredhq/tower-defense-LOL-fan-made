@@ -12,11 +12,16 @@ public class Viktor : MonoBehaviour
 
     private float timeCompActivated = 0f;
     private bool isCompActivated = false;
-    private ViktorUltimate ultimateRef;
+    public ViktorUltimate ultimateRef;
 
 
     private int numberTimeShooted;
 
+    private void OnDestroy()
+    {
+        if (isCompActivated)
+            Destroy(ultimateRef.gameObject);
+    }
     private void Start()
     {
         numberTimeShooted = 0;

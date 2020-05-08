@@ -5,7 +5,7 @@ public class Ennemy : MonoBehaviour
 {
     [HideInInspector]
     public float speed;
-
+    [HideInInspector]
     public Image hpBar;
 
     public float startSpeed = 10f;
@@ -19,7 +19,8 @@ public class Ennemy : MonoBehaviour
     public GameObject deathEffect;
     public GameObject hpBarCanvas;
 
-    private GameObject hpBarGO;
+    [HideInInspector]
+    public GameObject hpBarGO;
     private bool isAlive = true;
 
     private void Start()

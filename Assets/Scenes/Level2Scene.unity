@@ -18308,21 +18308,98 @@ MonoBehaviour:
   timeBetweenWaves: 1
   timeBetweenSpawn: 0.5
   waves:
-  - enemyPrefab: {fileID: 299914288099356412, guid: be522cd17cb6b8d4aaf80db972b0985c, type: 3}
-    count: 3
-    spawnRate: 2
-  - enemyPrefab: {fileID: 299914288099356412, guid: be522cd17cb6b8d4aaf80db972b0985c, type: 3}
-    count: 6
-    spawnRate: 2
-  - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
-    count: 5
-    spawnRate: 1
-  - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
-    count: 9
-    spawnRate: 1.5
-  - enemyPrefab: {fileID: 299914288099356412, guid: dde7acdc7db6d6d4b8be4f0726552a18, type: 3}
-    count: 5
-    spawnRate: 1
+  - subWaves:
+    - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
+      count: 2
+      spawnRate: 2
+      startSpawn: 0
+    - enemyPrefab: {fileID: 299914288099356412, guid: be522cd17cb6b8d4aaf80db972b0985c, type: 3}
+      count: 4
+      spawnRate: 2
+      startSpawn: 1.5
+  - subWaves:
+    - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
+      count: 3
+      spawnRate: 3
+      startSpawn: 0
+    - enemyPrefab: {fileID: 299914288099356412, guid: dde7acdc7db6d6d4b8be4f0726552a18, type: 3}
+      count: 3
+      spawnRate: 1.5
+      startSpawn: 2
+  - subWaves:
+    - enemyPrefab: {fileID: 299914288099356412, guid: be522cd17cb6b8d4aaf80db972b0985c, type: 3}
+      count: 2
+      spawnRate: 1
+      startSpawn: 0
+    - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
+      count: 3
+      spawnRate: 1.75
+      startSpawn: 0.33
+    - enemyPrefab: {fileID: 299914288099356412, guid: dde7acdc7db6d6d4b8be4f0726552a18, type: 3}
+      count: 2
+      spawnRate: 1.66
+      startSpawn: 0.67
+  - subWaves:
+    - enemyPrefab: {fileID: 299914288099356412, guid: dde7acdc7db6d6d4b8be4f0726552a18, type: 3}
+      count: 5
+      spawnRate: 2.5
+      startSpawn: 0
+    - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
+      count: 7
+      spawnRate: 2
+      startSpawn: 2.5
+  - subWaves:
+    - enemyPrefab: {fileID: 299914288099356412, guid: dde7acdc7db6d6d4b8be4f0726552a18, type: 3}
+      count: 6
+      spawnRate: 2.25
+      startSpawn: 0
+    - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
+      count: 8
+      spawnRate: 3.33
+      startSpawn: 4
+    - enemyPrefab: {fileID: 299914288099356412, guid: dde7acdc7db6d6d4b8be4f0726552a18, type: 3}
+      count: 7
+      spawnRate: 3
+      startSpawn: 2
+    - enemyPrefab: {fileID: 299914288099356412, guid: be522cd17cb6b8d4aaf80db972b0985c, type: 3}
+      count: 10
+      spawnRate: 4
+      startSpawn: 2
+  - subWaves:
+    - enemyPrefab: {fileID: 299914288099356412, guid: be522cd17cb6b8d4aaf80db972b0985c, type: 3}
+      count: 15
+      spawnRate: 3
+      startSpawn: 0
+    - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
+      count: 10
+      spawnRate: 2.5
+      startSpawn: 0.5
+  - subWaves:
+    - enemyPrefab: {fileID: 299914288099356412, guid: dde7acdc7db6d6d4b8be4f0726552a18, type: 3}
+      count: 18
+      spawnRate: 3
+      startSpawn: 0
+  - subWaves:
+    - enemyPrefab: {fileID: 299914288099356412, guid: be522cd17cb6b8d4aaf80db972b0985c, type: 3}
+      count: 10
+      spawnRate: 2
+      startSpawn: 0
+    - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
+      count: 8
+      spawnRate: 2
+      startSpawn: 1.25
+    - enemyPrefab: {fileID: 299914288099356412, guid: dde7acdc7db6d6d4b8be4f0726552a18, type: 3}
+      count: 7
+      spawnRate: 1.5
+      startSpawn: 1.5
+    - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
+      count: 18
+      spawnRate: 4
+      startSpawn: 3
+    - enemyPrefab: {fileID: 299914288099356412, guid: be522cd17cb6b8d4aaf80db972b0985c, type: 3}
+      count: 25
+      spawnRate: 5
+      startSpawn: 0.5
 --- !u!114 &1418324669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26792,8 +26869,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneFader: {fileID: 8985884689524193887}
-  nextLevelName: Level2Scene
-  levelToUnlock: 2
+  nextLevelName: Level3Scene
+  levelToUnlock: 3
 --- !u!95 &2129228202
 Animator:
   serializedVersion: 3
