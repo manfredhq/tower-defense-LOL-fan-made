@@ -3,9 +3,7 @@
 [System.Serializable]
 public class Wave
 {
-    public GameObject enemyPrefab;
+    public PreciseWave[] subWaves;
 
-    public int count;
 
-    public float spawnRate;
 }

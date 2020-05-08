@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -51,18 +52,34 @@ public class WaveSpawner : MonoBehaviour
         PlayerStats.waves++;
 
         Wave wave = waves[waveIndex];
+        List<PreciseWave> subWavesToSpawn = new List<PreciseWave>();
 
-        EnemiesAlives = wave.count;
-
-        for (int i = 0; i < wave.count; i++)
+        foreach (PreciseWave subWaves in wave.subWaves)
         {
-            SpawnEnnemy(wave.enemyPrefab);
-            yield return new WaitForSeconds(1f / wave.spawnRate);
+            EnemiesAlives += subWaves.count;
+            subWavesToSpawn.Add(subWaves);
         }
+
+        foreach (PreciseWave subWave in wave.subWaves)
+        {
+            yield return new WaitForSeconds(subWave.startSpawn);
+            StartCoroutine(SpawnSubWave(subWave));
+
+        }
+
         waveIndex++;
         countdown = timeBetweenWaves;
 
 
+    }
+
+    IEnumerator SpawnSubWave(PreciseWave subWave)
+    {
+        for (int i = 0; i < subWave.count; i++)
+        {
+            SpawnEnnemy(subWave.enemyPrefab);
+            yield return new WaitForSeconds(1f / subWave.spawnRate);
+        }
     }
 
     void SpawnEnnemy(GameObject enemyPrefab)
