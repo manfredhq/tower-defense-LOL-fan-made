@@ -18268,6 +18268,7 @@ GameObject:
   - component: {fileID: 1418324670}
   - component: {fileID: 1418324671}
   - component: {fileID: 1418324672}
+  - component: {fileID: 1418324673}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -18296,7 +18297,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1418324666}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0d5eafb6543b1a4cb9d3f2c5c4c8e8f, type: 3}
   m_Name: 
@@ -18480,6 +18481,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ui: {fileID: 1606852329}
   sceneFader: {fileID: 8985884689524193887}
+--- !u!114 &1418324673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1418324666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a035bb3c5bb1143acfdf423773904c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  valueWave1: 10
+  valueLastWave: 0
+  valueThisWave: 0
+  valueCurrentWave: 0
+  container: {fileID: 1008186232}
+  spawnPoint: {fileID: 486051660}
+  waveCountdownTimer: {fileID: 441841564}
+  gameManager: {fileID: 1418324671}
+  timeBetweenWaves: 2
+  timeBetweenSpawn: 0.5
+  enemies:
+  - enemyPrefab: {fileID: 299914288099356412, guid: be522cd17cb6b8d4aaf80db972b0985c, type: 3}
+    value: 2
+  - enemyPrefab: {fileID: 299914288099356412, guid: dde7acdc7db6d6d4b8be4f0726552a18, type: 3}
+    value: 8
+  - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
+    value: 3
+  spawnRate: 3
+  countdown: 1
 --- !u!1001 &1420602614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26892,8 +26924,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneFader: {fileID: 8985884689524193887}
-  nextLevelName: Level3Scene
-  levelToUnlock: 3
+  nextLevelName: LevelSelector
+  levelToUnlock: 0
 --- !u!95 &2129228202
 Animator:
   serializedVersion: 3

@@ -25,6 +25,8 @@ public class LevelSelector : MonoBehaviour
             }
 
         }
+
+        levelButtons[levelButtons.Length - 1].interactable = true;
     }
     public void Select(string levelName)
     {

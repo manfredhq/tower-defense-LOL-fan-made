@@ -47,6 +47,7 @@ public class Ennemy : MonoBehaviour
         Destroy(effect, 5f);
 
         WaveSpawner.EnemiesAlives--;
+        EndlessWaveSpawner.EnemiesAlives--;
         Destroy(gameObject);
     }
 
