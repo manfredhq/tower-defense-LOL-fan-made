@@ -18423,10 +18423,6 @@ MonoBehaviour:
       count: 19
       spawnRate: 3.5
       startSpawn: 0.33
-  - subWaves: []
-  - subWaves: []
-  - subWaves: []
-  - subWaves: []
 --- !u!114 &1418324669
 MonoBehaviour:
   m_ObjectHideFlags: 0
