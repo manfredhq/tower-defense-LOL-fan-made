@@ -18494,11 +18494,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   valueWave1: 10
+  valueLastWave: 0
+  valueThisWave: 0
+  valueCurrentWave: 0
   container: {fileID: 1008186232}
   spawnPoint: {fileID: 486051660}
   waveCountdownTimer: {fileID: 441841564}
   gameManager: {fileID: 1418324671}
-  timeBetweenWaves: 7
+  timeBetweenWaves: 2
   timeBetweenSpawn: 0.5
   enemies:
   - enemyPrefab: {fileID: 299914288099356412, guid: be522cd17cb6b8d4aaf80db972b0985c, type: 3}
@@ -18507,6 +18510,8 @@ MonoBehaviour:
     value: 8
   - enemyPrefab: {fileID: 299914288099356412, guid: 047ee2449de54194eb121aa28aeb2cc0, type: 3}
     value: 3
+  spawnRate: 3
+  countdown: 1
 --- !u!1001 &1420602614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26919,8 +26924,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneFader: {fileID: 8985884689524193887}
-  nextLevelName: Level3Scene
-  levelToUnlock: 3
+  nextLevelName: LevelSelector
+  levelToUnlock: 0
 --- !u!95 &2129228202
 Animator:
   serializedVersion: 3

@@ -24,6 +24,7 @@ public class EndlessWaveSpawner : MonoBehaviour
     public float timeBetweenSpawn = .5f;
 
     public List<EnemyValue> enemies = new List<EnemyValue>();
+    public float spawnRate = 2f;
 
     private List<EnemyValue> enemiesCanSpawn = new List<EnemyValue>();
     private int waveIndex = 0;
@@ -65,6 +66,27 @@ public class EndlessWaveSpawner : MonoBehaviour
 
     IEnumerator SpawnWave()
     {
+        float spawnRateModifier = Random.Range(-1f, 1f);
+        float spawnRateModifiedNumber = spawnRateModifier;
+        if (spawnRate + spawnRateModifier < 1)
+        {
+            spawnRateModifiedNumber = spawnRate - 1f;
+            spawnRate = 1f;
+
+        }
+        else if (spawnRate + spawnRateModifier > 6)
+        {
+            spawnRateModifiedNumber = Mathf.Abs(spawnRate - 6);
+            spawnRate = 6f;
+        }
+        else
+        {
+            spawnRate += spawnRateModifier;
+        }
+        Debug.Log(spawnRateModifier);
+        Debug.Log(spawnRateModifiedNumber);
+        valueCurrentWave -= Mathf.CeilToInt(spawnRateModifiedNumber * 10);
+
         do
         {
             enemiesCanSpawn = enemies.FindAll(delegate (EnemyValue enemy)
@@ -75,7 +97,7 @@ public class EndlessWaveSpawner : MonoBehaviour
             {
                 int rng = Random.Range(0, enemiesCanSpawn.Count);
                 SpawnEnnemy(enemiesCanSpawn[rng]);
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(1f / spawnRate + (waveIndex / 20));
             }
         } while (enemiesCanSpawn.Count != 0);
 
