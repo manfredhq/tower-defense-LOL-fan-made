@@ -49,6 +49,7 @@ public class EnnemyMovement : MonoBehaviour
     {
         PlayerStats.lives--;
         WaveSpawner.EnemiesAlives--;
+        EndlessWaveSpawner.EnemiesAlives--;
         GetComponent<Ennemy>().hpBarGO.SetActive(false);
         Destroy(gameObject);
     }
