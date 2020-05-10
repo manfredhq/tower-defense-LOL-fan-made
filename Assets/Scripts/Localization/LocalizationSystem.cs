@@ -17,6 +17,12 @@ public class LocalizationSystem
 
     public static bool isInit;
 
+    public static void ChangeLanguage(Language value)
+    {
+        language = value;
+        Init();
+    }
+
     public static void Init()
     {
         CSVLoader csvLoader = new CSVLoader();
@@ -29,12 +35,6 @@ public class LocalizationSystem
         isInit = true;
     }
 
-    public static Dictionary<string, string> GetDictionaryForEditor()
-    {
-        if (!isInit) { Init(); }
-        return localizedEN;
-    }
-
     public static string GetLocalizedValue(string key)
     {
         if (!isInit)
@@ -43,12 +43,12 @@ public class LocalizationSystem
         }
         string value = key;
 
-        switch (language)
+        switch (PlayerPrefs.GetString("language"))
         {
-            case Language.English:
+            case "en":
                 localizedEN.TryGetValue(key, out value);
                 break;
-            case Language.French:
+            case "fr":
                 localizedFR.TryGetValue(key, out value);
                 break;
         }
