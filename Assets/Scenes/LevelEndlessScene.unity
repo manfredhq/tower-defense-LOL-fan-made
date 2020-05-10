@@ -6888,6 +6888,7 @@ GameObject:
   - component: {fileID: 515393561}
   - component: {fileID: 515393560}
   - component: {fileID: 515393559}
+  - component: {fileID: 515393562}
   m_Layer: 5
   m_Name: Wave
   m_TagString: Untagged
@@ -7045,6 +7046,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 515393557}
   m_CullTransparentMesh: 0
+--- !u!114 &515393562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515393557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf5509197ff77a9449cf62ea7a12659b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wavesText: {fileID: 515393560}
+  timeBetweenImproveText: 0.05
 --- !u!1001 &539608404
 PrefabInstance:
   m_ObjectHideFlags: 0

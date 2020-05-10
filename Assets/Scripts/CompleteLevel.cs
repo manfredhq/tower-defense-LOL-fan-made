@@ -10,6 +10,7 @@ public class CompleteLevel : MonoBehaviour
     public void GotoMenu()
     {
         WaveSpawner.EnemiesAlives = 0;
+        EndlessWaveSpawner.EnemiesAlives = 0;
         sceneFader.FadeTo("Menu");
     }
 
