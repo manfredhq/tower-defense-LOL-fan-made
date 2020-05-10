@@ -32,6 +32,7 @@ public class PauseMenu : MonoBehaviour
     {
         Toggle();
         WaveSpawner.EnemiesAlives = 0;
+        EndlessWaveSpawner.EnemiesAlives = 0;
         sceneFader.FadeTo(SceneManager.GetActiveScene().name);
     }
 
@@ -39,6 +40,7 @@ public class PauseMenu : MonoBehaviour
     {
         Toggle();
         WaveSpawner.EnemiesAlives = 0;
+        EndlessWaveSpawner.EnemiesAlives = 0;
         sceneFader.FadeTo("Menu");
     }
 }

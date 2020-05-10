@@ -33,6 +33,7 @@ public class EndlessWaveSpawner : MonoBehaviour
 
     private void Start()
     {
+        PlayerStats.waves = 0;
         isWaveSpawnedEntierly = false;
         valueCurrentWave = valueWave1;
         valueThisWave = valueCurrentWave;
@@ -46,7 +47,6 @@ public class EndlessWaveSpawner : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(EnemiesAlives);
         if (EnemiesAlives > 0)
         {
             return;
@@ -66,6 +66,7 @@ public class EndlessWaveSpawner : MonoBehaviour
 
     IEnumerator SpawnWave()
     {
+        PlayerStats.waves++;
         float spawnRateModifier = Random.Range(-1f, 1f);
         float spawnRateModifiedNumber = spawnRateModifier;
         if (spawnRate + spawnRateModifier < 1)
