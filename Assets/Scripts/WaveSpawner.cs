@@ -22,6 +22,7 @@ public class WaveSpawner : MonoBehaviour
     {
         if (EnemiesAlives > 0)
         {
+            GameManager.instance.SetFirstEnemy();
             return;
         }
         if (waveIndex == waves.Length && !gameManager.GetGameStatus())

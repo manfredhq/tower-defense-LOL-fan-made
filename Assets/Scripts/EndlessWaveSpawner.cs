@@ -49,6 +49,7 @@ public class EndlessWaveSpawner : MonoBehaviour
     {
         if (EnemiesAlives > 0)
         {
+            GameManager.instance.SetFirstEnemy();
             return;
         }
         if (countdown <= 0f)
@@ -119,7 +120,7 @@ public class EndlessWaveSpawner : MonoBehaviour
 
     void WaveValueGain(int lastWaveValue)
     {
-        valueThisWave = Mathf.RoundToInt(Mathf.Pow(lastWaveValue, 1.5f) + 3);
+        valueThisWave = Mathf.RoundToInt(Mathf.Pow(lastWaveValue, 1.2f) + 3);
         valueCurrentWave = valueThisWave;
     }
 }

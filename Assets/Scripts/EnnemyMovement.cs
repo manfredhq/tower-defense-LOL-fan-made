@@ -3,11 +3,12 @@
 [RequireComponent(typeof(Ennemy))]
 public class EnnemyMovement : MonoBehaviour
 {
-
-    private Transform target;
-    private int waypointIndex = 0;
-
-    private Ennemy enemy;
+    [HideInInspector]
+    public Transform target;
+    [HideInInspector]
+    public int waypointIndex = 0;
+    [HideInInspector]
+    public Ennemy enemy;
 
     // Start is called before the first frame update
     void Start()

@@ -18482,6 +18482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOverUI: {fileID: 171136629}
   completeLevelUI: {fileID: 2129228199}
+  firstEnemy: {fileID: 0}
 --- !u!114 &1418324672
 MonoBehaviour:
   m_ObjectHideFlags: 0

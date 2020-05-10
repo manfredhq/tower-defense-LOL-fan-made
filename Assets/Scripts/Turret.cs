@@ -84,8 +84,13 @@ public class Turret : MonoBehaviour
         }
         else if (actualMode == shootMode.First)
         {
+            if (WaveSpawner.EnemiesAlives > 0 || EndlessWaveSpawner.EnemiesAlives > 0)
+            {
+                target = GameManager.instance.firstEnemy.transform;
+                ennemy = GameManager.instance.firstEnemy.GetComponent<Ennemy>();
+            }
             //focus on the ennemy closer to the end
-            for (int i = 0; i < container.transform.childCount; i++)
+            /*for (int i = 0; i < container.transform.childCount; i++)
             {
                 float distanceToEnnemy = Vector3.Distance(transform.position, container.transform.GetChild(i).transform.position);
                 if (distanceToEnnemy <= range)
@@ -99,7 +104,7 @@ public class Turret : MonoBehaviour
                     target = null;
                     ennemy = null;
                 }
-            }
+            }*/
         }
     }
 
