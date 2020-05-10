@@ -1517,9 +1517,10 @@ GameObject:
   - component: {fileID: 5298073902058391344}
   - component: {fileID: 5298073902058391345}
   - component: {fileID: 5982763971457921064}
+  - component: {fileID: 7919105463725724124}
   m_Layer: 0
   m_Name: yorickUltimate
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1605,6 +1606,20 @@ MonoBehaviour:
   target: {fileID: 0}
   waypointIndex: 0
   enemy: {fileID: 0}
+--- !u!136 &7919105463725724124
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7483309505001038183}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 159.76363
+  m_Height: 319.52725
+  m_Direction: 1
+  m_Center: {x: -5.1921606, y: 109.50451, z: -39.659096}
 --- !u!1 &7674988099122044616
 GameObject:
   m_ObjectHideFlags: 0

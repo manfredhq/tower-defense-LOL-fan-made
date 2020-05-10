@@ -1,4 +1,5 @@
-﻿using TMPro;
+﻿using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -45,39 +46,48 @@ public class GameManager : MonoBehaviour
     public void SetFirstEnemy()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        EnnemyMovement temp = enemies[0].GetComponent<EnnemyMovement>();
-        foreach (GameObject enemy in enemies)
+        EnnemyMovement temp;
+        if (enemies.Length > 0)
         {
-            EnnemyMovement EMovement = enemy.GetComponent<EnnemyMovement>();
-            if (EMovement.waypointIndex > temp.waypointIndex)
+            temp = enemies[0].GetComponent<EnnemyMovement>();
+            foreach (GameObject enemy in enemies)
             {
-                temp = EMovement;
-            }
-            else if (EMovement.waypointIndex == temp.waypointIndex && EMovement.waypointIndex > 0)
-            {
-                Vector3 posWaypoint = Waypoints.points[EMovement.waypointIndex].transform.position;
+                EnnemyMovement EMovement = enemy.GetComponent<EnnemyMovement>();
+                if (EMovement.waypointIndex > temp.waypointIndex)
+                {
+                    temp = EMovement;
+                }
+                else if (EMovement.waypointIndex == temp.waypointIndex && EMovement.waypointIndex > 0)
+                {
+                    Vector3 posWaypoint = Waypoints.points[EMovement.waypointIndex].transform.position;
 
-                Vector3 posPreviousWaypoint = Waypoints.points[EMovement.waypointIndex - 1].transform.position;
-                Vector3 dirWaypoint = posPreviousWaypoint - posWaypoint;
-                if (dirWaypoint.x > 2 || dirWaypoint.x < -2)
-                {
-                    //X
-                    if (Mathf.Abs((EMovement.transform.position - EMovement.target.position).x) < Mathf.Abs((temp.transform.position - temp.target.position).x))
+                    Vector3 posPreviousWaypoint = Waypoints.points[EMovement.waypointIndex - 1].transform.position;
+                    Vector3 dirWaypoint = posPreviousWaypoint - posWaypoint;
+                    if (dirWaypoint.x > 2 || dirWaypoint.x < -2)
                     {
-                        temp = EMovement;
+                        //X
+                        if (Mathf.Abs((EMovement.transform.position - EMovement.target.position).x) < Mathf.Abs((temp.transform.position - temp.target.position).x))
+                        {
+                            temp = EMovement;
+                        }
                     }
-                }
-                else if (dirWaypoint.z > 2 || dirWaypoint.z < -2)
-                {
-                    //Z
-                    if (Mathf.Abs((EMovement.transform.position - EMovement.target.position).z) < Mathf.Abs((temp.transform.position - temp.target.position).z))
+                    else if (dirWaypoint.z > 2 || dirWaypoint.z < -2)
                     {
-                        temp = EMovement;
+                        //Z
+                        if (Mathf.Abs((EMovement.transform.position - EMovement.target.position).z) < Mathf.Abs((temp.transform.position - temp.target.position).z))
+                        {
+                            temp = EMovement;
+                        }
                     }
                 }
             }
+            firstEnemy = temp.gameObject;
         }
-        firstEnemy = temp.gameObject;
+        else
+        {
+            firstEnemy = null;
+        }
+
     }
 
     private void EndGame()

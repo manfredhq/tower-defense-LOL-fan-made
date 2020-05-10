@@ -18529,7 +18529,7 @@ MonoBehaviour:
   - enemyPrefab: {fileID: 5149312048862070494, guid: 2693ff85abd7c8e4b90f203af11fe1f4, type: 3}
     value: 6
   - enemyPrefab: {fileID: 7483309505001038183, guid: 4bdd1c9c0f037094f8f3f2bf3af63552, type: 3}
-    value: 1
+    value: 25
   spawnRate: 3
   countdown: 1
 --- !u!1001 &1420602614
