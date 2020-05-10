@@ -8,6 +8,8 @@ public class Ennemy : MonoBehaviour
     [HideInInspector]
     public Image hpBar;
 
+    public Vector3 offset = new Vector3(0, 3, 0);
+
     public float startSpeed = 10f;
 
     public float startHp = 100;
@@ -34,7 +36,7 @@ public class Ennemy : MonoBehaviour
 
     private void Update()
     {
-        hpBarGO.transform.position = transform.position + new Vector3(0, 3, 0);
+        hpBarGO.transform.position = transform.position + offset;
 
     }
     private void Die()

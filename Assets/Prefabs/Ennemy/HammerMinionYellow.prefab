@@ -48,7 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   hpBar: {fileID: 0}
-  startSpeed: 15
+  offset: {x: 0, y: 3, z: 0}
+  startSpeed: 13
   startHp: 200
   currentHp: 0
   moneyValue: 30
@@ -56,6 +57,7 @@ MonoBehaviour:
   magicResistance: 25
   deathEffect: {fileID: 3382960836113860337, guid: b6bbc9388d4349f47b3ff094b6dead7a, type: 3}
   hpBarCanvas: {fileID: 6761151840423629572, guid: 04291cb8529bdeb48a361afb9d56749f, type: 3}
+  hpBarGO: {fileID: 0}
 --- !u!114 &7357410518197040654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,6 +70,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54391d35e0727d846b83de3213be445e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  waypointIndex: 0
+  enemy: {fileID: 0}
 --- !u!136 &2846489814883194879
 CapsuleCollider:
   m_ObjectHideFlags: 0
