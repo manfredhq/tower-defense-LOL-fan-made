@@ -18,6 +18,8 @@ public class WaveSpawner : MonoBehaviour
     public Wave[] waves;
     private float countdown = 2f;
     private int waveIndex = 0;
+
+    private bool isPause = false;
     private void Update()
     {
         if (EnemiesAlives > 0)
@@ -39,13 +41,23 @@ public class WaveSpawner : MonoBehaviour
             countdown = timeBetweenWaves;
         }
 
-        countdown -= Time.deltaTime;
+        if (!isPause)
+        {
+            countdown -= Time.deltaTime;
 
-        countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
+            countdown = Mathf.Clamp(countdown, 0f, Mathf.Infinity);
 
-        waveCountdownTimer.text = string.Format("{0:00.00}", countdown);
+            waveCountdownTimer.text = string.Format("{0:00.00}", countdown);
+
+        }
 
 
+
+    }
+
+    public void PauseCountdown(bool pause)
+    {
+        isPause = pause;
     }
 
     IEnumerator SpawnWave()

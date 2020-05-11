@@ -19,4 +19,12 @@ public class TextLocalizerUI : MonoBehaviour
         string value = LocalizationSystem.GetLocalizedValue(key);
         textField.text = value;
     }
+
+    public void Refresh()
+    {
+        LocalizationSystem.Init();
+        textField = GetComponent<TextMeshProUGUI>();
+        string value = LocalizationSystem.GetLocalizedValue(key);
+        textField.text = value;
+    }
 }
