@@ -11,10 +11,10 @@ public class DialogManager : MonoBehaviour
 
     public WaveSpawner waveSpawner;
 
-    public DialogOptions.currentState nextDialogState;
+    private DialogOptions.currentState nextDialogState;
 
 
-    public int dialogIndex = 0;
+    private int dialogIndex = 0;
 
     private void Start()
     {
@@ -53,31 +53,6 @@ public class DialogManager : MonoBehaviour
             Toggle(false);
         }
         nextDialogState = dialogs[dialogIndex + 1].state;
-        /*if (dialogs[dialogIndex + 1].state == DialogOptions.currentState.Start)
-        {
-            nextDialogState = DialogOptions.currentState.Start;
-            if (dialogIndex < dialogs.Length - 1)
-            {
-                dialogIndex++;
-                dialogText.key = dialogs[dialogIndex].key;
-                dialogText.Refresh();
-                Debug.Log("next dialog");
-            }
-            else
-            {
-                Toggle();
-                Debug.Log("No more dialog");
-            }
-        }
-        else if (dialogs[dialogIndex + 1].state == DialogOptions.currentState.BeforeWave)
-        {
-            nextDialogState = DialogOptions.currentState.BeforeWave;
-        }
-        else if (dialogs[dialogIndex + 1].state == DialogOptions.currentState.WaveEntierlySpawned)
-        {
-            nextDialogState = DialogOptions.currentState.WaveEntierlySpawned;
-        }*/
-
     }
 
     private void Update()
