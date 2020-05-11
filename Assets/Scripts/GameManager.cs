@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
 
     public GameObject firstEnemy;
 
+    public DialogManager dialogManager;
+
     public static GameManager instance;
 
     //to handle the singleton

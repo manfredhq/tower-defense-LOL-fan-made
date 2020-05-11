@@ -11669,11 +11669,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb594a876ef043f4a936953c1fcab836, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogKeys:
-  - Tutorial_Dialog_1
-  - Tutorial_Dialog_2
+  dialogs:
+  - key: Tutorial_Dialog_1
+    state: 0
+    waveIndexToStart: 0
+  - key: Tutorial_Dialog_2
+    state: 1
+    waveIndexToStart: 1
+  - key: Tutorial_Dialog_1
+    state: 2
+    waveIndexToStart: 1
   dialogText: {fileID: 329322432}
   dialogCanvas: {fileID: 2005301803}
+  waveSpawner: {fileID: 1418324668}
+  nextDialogState: 0
 --- !u!1 &1107718200
 GameObject:
   m_ObjectHideFlags: 0
@@ -16585,6 +16594,7 @@ MonoBehaviour:
       count: 2
       spawnRate: 1
       startSpawn: 1
+  waveIndex: 0
 --- !u!114 &1418324669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16629,6 +16639,7 @@ MonoBehaviour:
   gameOverUI: {fileID: 171136629}
   completeLevelUI: {fileID: 1540649360}
   firstEnemy: {fileID: 0}
+  dialogManager: {fileID: 1105402298}
 --- !u!114 &1418324672
 MonoBehaviour:
   m_ObjectHideFlags: 0

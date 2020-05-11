@@ -17,7 +17,7 @@ public class WaveSpawner : MonoBehaviour
 
     public Wave[] waves;
     private float countdown = 2f;
-    private int waveIndex = 0;
+    public int waveIndex = 0;
 
     private bool isPause = false;
     private void Update()
@@ -75,6 +75,10 @@ public class WaveSpawner : MonoBehaviour
 
         foreach (PreciseWave subWave in wave.subWaves)
         {
+            while (isPause)
+            {
+                yield return null;
+            }
             yield return new WaitForSeconds(subWave.startSpawn);
             StartCoroutine(SpawnSubWave(subWave));
 
@@ -83,16 +87,20 @@ public class WaveSpawner : MonoBehaviour
         waveIndex++;
         countdown = timeBetweenWaves;
 
-
     }
 
     IEnumerator SpawnSubWave(PreciseWave subWave)
     {
         for (int i = 0; i < subWave.count; i++)
         {
+            while (isPause)
+            {
+                yield return null;
+            }
             SpawnEnnemy(subWave.enemyPrefab);
             yield return new WaitForSeconds(1f / subWave.spawnRate);
         }
+        gameManager.dialogManager.OnWaveEntierlySpawned();
     }
 
     void SpawnEnnemy(GameObject enemyPrefab)
