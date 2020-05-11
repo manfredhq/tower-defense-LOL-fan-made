@@ -49,7 +49,7 @@ public class EndlessWaveSpawner : MonoBehaviour
     {
         if (EnemiesAlives > 0)
         {
-            GameManager.instance.SetFirstEnemy();
+            //GameManager.instance.SetFirstEnemy();
             return;
         }
         if (countdown <= 0f)

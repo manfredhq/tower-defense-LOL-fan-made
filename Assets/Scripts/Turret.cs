@@ -28,7 +28,7 @@ public class Turret : MonoBehaviour
     public ParticleSystem impactEffect;
     public Light impactLight;
 
-    [HideInInspector]
+    //[HideInInspector]
     public Transform target;
     private Ennemy ennemy;
 
@@ -84,10 +84,11 @@ public class Turret : MonoBehaviour
         }
         else if (actualMode == shootMode.First)
         {
-            if (WaveSpawner.EnemiesAlives > 0 || EndlessWaveSpawner.EnemiesAlives > 0)
+            if ((WaveSpawner.EnemiesAlives > 0 || EndlessWaveSpawner.EnemiesAlives > 0))
             {
-                target = GameManager.instance.firstEnemy.transform;
-                ennemy = GameManager.instance.firstEnemy.GetComponent<Ennemy>();
+                SetFirstEnemy();
+                //target = GameManager.instance.firstEnemy.transform;
+                //ennemy = GameManager.instance.firstEnemy.GetComponent<Ennemy>();
             }
             //focus on the ennemy closer to the end
             /*for (int i = 0; i < container.transform.childCount; i++)
@@ -105,6 +106,79 @@ public class Turret : MonoBehaviour
                     ennemy = null;
                 }
             }*/
+        }
+    }
+
+    public void SetFirstEnemy()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        EnnemyMovement temp;
+        if (enemies.Length > 0)
+        {
+            temp = enemies[0].GetComponent<EnnemyMovement>();
+            foreach (GameObject enemy in enemies)
+            {
+
+                EnnemyMovement EMovement = enemy.GetComponent<EnnemyMovement>();
+                if (!isInRange(temp.gameObject))
+                {
+                    temp = EMovement;
+                }
+                if (EMovement.waypointIndex > temp.waypointIndex && isInRange(EMovement.gameObject))
+                {
+                    temp = EMovement;
+                }
+                else if (EMovement.waypointIndex == temp.waypointIndex && EMovement.waypointIndex > 0 && isInRange(EMovement.gameObject))
+                {
+                    Vector3 posWaypoint = Waypoints.points[EMovement.waypointIndex].transform.position;
+
+                    Vector3 posPreviousWaypoint = Waypoints.points[EMovement.waypointIndex - 1].transform.position;
+                    Vector3 dirWaypoint = posPreviousWaypoint - posWaypoint;
+                    if (dirWaypoint.x > 2 || dirWaypoint.x < -2)
+                    {
+                        //X
+                        if (Mathf.Abs((EMovement.transform.position - EMovement.target.position).x) < Mathf.Abs((temp.transform.position - temp.target.position).x))
+                        {
+                            temp = EMovement;
+                        }
+                    }
+                    else if (dirWaypoint.z > 2 || dirWaypoint.z < -2)
+                    {
+                        //Z
+                        if (Mathf.Abs((EMovement.transform.position - EMovement.target.position).z) < Mathf.Abs((temp.transform.position - temp.target.position).z))
+                        {
+                            temp = EMovement;
+                        }
+                    }
+                }
+            }
+            if (isInRange(temp.gameObject))
+                target = temp.gameObject.transform;
+            else
+            {
+                target = null;
+            }
+        }
+        else
+        {
+            target = null;
+        }
+
+    }
+
+    private bool isInRange(GameObject obj)
+    {
+        GameObject container = GameObject.FindGameObjectWithTag(containerTag);
+        float distanceToEnnemy = Vector3.Distance(transform.position, obj.transform.position);
+        if (distanceToEnnemy <= range)
+        {
+            target = obj.transform.transform;
+            ennemy = target.GetComponent<Ennemy>();
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 
