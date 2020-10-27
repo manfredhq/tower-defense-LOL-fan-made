@@ -112,7 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   creator: {fileID: 0}
   speed: 30
-  tickDamage: 60
+  tickDamage: 40
   timeBetweenTick: 0.5
   typeOfDamage: 1
 --- !u!54 &350878076720981937
